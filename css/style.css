@@ -21,3 +21,8 @@ section{
     justify-content: space-evenly;
     align-items: center;
 }
+
+main{
+    width: 85%;
+    margin: auto;
+}
