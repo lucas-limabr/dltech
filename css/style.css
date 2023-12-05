@@ -11,6 +11,7 @@
 body,html{
     height: 100vh;
     font-family: 'Poppins', sans-serif;
+    background-color: #FAFAFB;
 }
 
 /* cabeçalho */
@@ -25,4 +26,8 @@ section{
 main{
     width: 85%;
     margin: auto;
+}
+
+div{
+    background: white;
 }
