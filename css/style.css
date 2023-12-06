@@ -76,6 +76,7 @@ input + span{
 }
 /* fim do cabeçalho */
 
+/* conteúdo principal */
 /* característica padrão para todas as seções do index */
 section{
     display: flex;
@@ -84,13 +85,11 @@ section{
     height:480px;
 }
 
-/* conteúdo principal */
 main{
     width: 90%;
     margin: auto;
     background-color: #f1f1f1;
 }
-/* #FAFAFB */
 
 section > div{
     background: white;
