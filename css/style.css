@@ -1,7 +1,7 @@
 /* fonte do google fontes (Poppins) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-:root{
+:root {
     --cor_pumpkin: #F17A28;
     --cor_green_blue: #0060B1;
     --cor_orange: #FF6500;
@@ -10,88 +10,90 @@
     --cor_gray: #7F858D;
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body,html{
+body,
+html {
     height: 100vh;
 }
 
 /* início do cabeçalho */
-header > h1{
-   background-color: var(--cor_green_blue);
-   padding: 25px 0px;
-   color: white;
-   text-align: center; 
+header>h1 {
+    background-color: var(--cor_green_blue);
+    padding: 25px 0px;
+    color: white;
+    text-align: center;
 }
 
-header > nav{
+header>nav {
     background-color: var(--cor_orange);
 }
 
-menu{
+menu {
     padding: 12px 0px 12px 25px;
 }
 
-menu > a{
+menu>a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 0px 15px;
 }
 
-a > span{
+a>span {
     position: relative;
     top: 6px;
 }
 
-a ~ span{
+a~span {
     color: white;
 }
 
-menu > a:hover{
-    background-color:#ef833c;
+menu>a:hover {
+    background-color: #ef833c;
     padding: 10px;
     transition: 350ms;
 }
 
-input#search-bar{
+input#search-bar {
     width: 180px;
     border-radius: 15px;
     float: right;
-   height: 27px;
+    height: 27px;
     margin-right: 5%;
     border: none;
     padding-left: 7px;
 }
 
-input + span{
+input+span {
     position: absolute;
     right: 5.5%;
     color: var(--cor_rich_black);
 }
+
 /* fim do cabeçalho */
 
 /* conteúdo principal */
 /* característica padrão para todas as seções do index */
-section{
+section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height:480px;
+    height: 480px;
 }
 
-main{
+main {
     width: 90%;
     margin: auto;
     background-color: #f1f1f1;
 }
 
-section > div{
+section>div {
     background: white;
     width: 220px;
     height: 440px;
@@ -102,7 +104,7 @@ section > div{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.566);
 }
 
-span#icons-hover{
+span#icons-hover {
     /* visibility: hidden; */
     display: inline-block;
     color: var(--cor_gray);
@@ -110,30 +112,30 @@ span#icons-hover{
     margin-top: 8px;
 }
 
-main #primeiro-h2{
+main #primeiro-h2 {
     margin-top: 40px;
 }
 
-h2{
+h2 {
     background-color: var(--cor_pumpkin);
     color: white;
     font-size: 20px;
     margin: 28px 0px 20px 0px;
     padding: 8px 0px 8px 25px;
-    
+
 }
 
-h3{
+h3 {
     font-size: 14px;
     color: var(--cor_outer_space);
     padding: 8px 0px;
 }
 
-img{
+img {
     width: 200px;
 }
 
-button{
+button {
     position: absolute;
     bottom: 10px;
     display: flex;
@@ -149,29 +151,29 @@ button{
     font-size: 12px;
 }
 
-button > .material-symbols-outlined{
+button>.material-symbols-outlined {
     font-size: 24px;
     padding-right: 5px;
 }
 
-button:hover{
+button:hover {
     transition: 800ms;
     background-color: #ff9d60;
 }
 
-#preco-cortado{
+#preco-cortado {
     font-size: 12px;
     text-decoration: line-through;
     color: var(--cor_gray);
 }
 
-#preco-desconto{
+#preco-desconto {
     font-size: 20px;
     color: var(--cor_orange);
     font-weight: bold;
 }
 
-#texto-pix{
+#texto-pix {
     font-size: 12px;
     padding-bottom: 8px;
     color: var(--cor_gray);
