@@ -18,36 +18,12 @@ function divHover() {
     //necessário a variável ser let
     for (let i = 0; i < div_hover.length; i++) {
         //necessário o uso de arrow function neste caso quando eu preciso chamar uma função passando um argumento
-        div_hover[i].addEventListener('mouseenter', () => verificacaoDiv(i))
-    }
-}
-
-function verificacaoDiv(i) {
-    console.log(i)
-
-    switch (i) {
-        case 0:
-            exibiricone(i)
-            break;
-        case 1:
-            exibiricone(i)
-            break;
-        case 2:
-            exibiricone(i)
-            break;
-        case 3:
-            exibiricone(i)
-            break;
-        case 4:
-            exibiricone(i)
-            break;
-        default:
-            break;
+        div_hover[i].addEventListener('mouseenter', () => exibiricone(i))
     }
 }
 
 function exibiricone(j) {
-    console.log(j)
+    //console.log(j)
     span[j].style.visibility = "visible"
     span[j].style.cursor = "pointer"
 
