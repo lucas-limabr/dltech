@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Cadastro - DLtech</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <h1>DLtech</h1>
+            <!-- menu -->
+            <nav>
+                <menu>
+                    <a href="monte_seu_pc.html">Monte o seu pc</a> <span>|</span>
+                    <a href="categorias.html">Categorias</a> <span>|</span>
+                    <a href="login_cadastro.html">Login/cadastro</a> <span>|</span>
+                    <a href="">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </a> <span>|</span>
+                    <a href="">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </a>
+                    <!-- barra de pesquisa -->
+                    <input type="text" maxlength="10" minlength="3" id="search-bar" placeholder="Pesquisar...">
+                    <span class="material-symbols-outlined">search</span>
+                </menu>
+            </nav>
+        </header>
+
+        <div class="container">
+
+            <div class="cadastro">
+
+                <h2>CRIAR CONTA</h2>
+
+                <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+
+                    <p class="texto-tipo-conta">Tipo de conta</p>
+
+                    
+
+                    <label for="pessoa-fisica">Pessoa física</label>
+                    <input type="radio" class="input-radio" name="pessoa-fisica" id="pessoa-fisica">
+
+                    <label for="pessoa-juridica">Pessoa jurídica</label>
+                    <input type="radio" class="input-radio" name="pessoa-juridica" id="pessoa-juridica">
+                
+
+
+                    <div class="redes-sociais">
+                            <a href="https://www.facebook.com/"><button class="botao-facebook">Cadastrar com o <b>Facebook</b></button></a>
+                            <a href="https://accounts.google.com/"><button class="botao-google">Cadastrar com o <b>Google</b></button></a>
+                            <a href="https://appleid.apple.com/"><button class="botao-apple">Cadastrar com a <b>Apple</b></button></a>
+                    </div>
+
+                    <div class="ou">
+                       <hr><span>OU</span><hr> 
+                    </div>
+                    
+                    <div class="textos">
+
+                        <div class="nome-cpf">
+                            <input type="text" name="nome-completo" id="nome-completo" placeholder="Nome Completo*">
+                            <input type="text" name="cpf" id="cpf" placeholder="CPF*">
+                        </div>
+    
+                        <div class="data-telefone">
+                            <input type="date" name="data-nascimento" id="data-nascimento" placeholder="Data de nascimento*">
+                            <input type="tel" name="telefone-celular" id="telefone-celular" placeholder="Telefone celular*">
+                        </div>
+    
+                        <div class="e-mail">
+                            <input type="email" name="e-mail" id="e-mail" placeholder="E-mail*">
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div class="login">
+                <h2>FAZER LOGIN</h2>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
