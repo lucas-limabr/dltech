@@ -102,8 +102,8 @@ section > div{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.566);
 }
 
-span#icons-hover{
-    /* visibility: hidden; */
+span.icons-hover{
+    visibility: hidden;
     display: inline-block;
     color: var(--cor_gray);
     margin-left: 70%;
