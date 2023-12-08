@@ -54,6 +54,14 @@ a~span {
     color: white;
 }
 
+a > .material-symbols-outlined, .icons-hover > .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
 menu>a:hover {
     background-color: #ef833c;
     padding: 10px;
@@ -125,13 +133,13 @@ h2 {
 
 }
 
-h3 {
+.div-hover > h3 {
     font-size: 14px;
     color: var(--cor_outer_space);
     padding: 8px 0px;
 }
 
-img {
+.div-hover > img {
     width: 200px;
 }
 
@@ -161,22 +169,87 @@ button:hover {
     background-color: #ff9d60;
 }
 
-#preco-cortado {
+.preco-cortado {
     font-size: 12px;
     text-decoration: line-through;
     color: var(--cor_gray);
 }
 
-#preco-desconto {
+.preco-desconto {
     font-size: 20px;
     color: var(--cor_orange);
     font-weight: bold;
 }
 
-#texto-pix {
+.texto-pix {
     font-size: 12px;
     padding-bottom: 8px;
     color: var(--cor_gray);
 }
 
+#titulo-marcas{
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, #e6ddd8, var(--cor_pumpkin));
+    color: #0D1116;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#titulo-marcas > span{
+    padding-right: 15px;
+    color: var(--cor_orange);
+}
+
+section#secao-marcas  {
+   height: 300px;
+}
+
+.marcas{
+    width: 250px;
+    height: 235px;
+    border-radius: 0px; 
+}
+
+.marcas > img{
+    height: 140px;
+    border-radius: 4px;
+    display: block;
+    margin: auto;
+    width: 230px;
+    margin-top: 15px;
+}
+
+.marcas > h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--cor_outer_space);
+    padding-top: 10px;
+}
+
+.marcas > a{
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: var(--cor_orange);
+    font-size: 14px;
+    margin-left: 30%;
+    font-weight: 600;
+}
+
+.marcas > span{
+    color: #FF6500;
+    position: relative;
+    top: 3%;
+}
+
+.marcas a:hover{
+    text-decoration: underline;
+}
 /* fim do conteúdo principal */
