@@ -38,9 +38,12 @@ menu {
     padding: 12px 0px 12px 25px;
 }
 
+a{
+    text-decoration: none;
+}
+
 menu>a {
     color: white;
-    text-decoration: none;
     font-weight: bold;
     padding: 0px 15px;
 }
@@ -236,7 +239,6 @@ section#secao-marcas  {
 
 .marcas > a{
     padding-bottom: 10px;
-    text-decoration: none;
     color: var(--cor_orange);
     font-size: 14px;
     margin-left: 30%;
@@ -253,3 +255,53 @@ section#secao-marcas  {
     text-decoration: underline;
 }
 /* fim do conteúdo principal */
+
+/* início do rodapé */
+footer{
+    /* height: 280px; */
+    background-color: var(--cor_rich_black);
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 55px;
+    padding-bottom: 30px;
+    color: rgb(218, 214, 214);
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+footer a{
+    color: rgb(218, 214, 214);
+}
+
+footer a[href="https://encurtador.com.br/coMN0"]{
+    display: inline-block;
+    text-decoration: underline;
+    padding: 6.5px 0px;
+}
+
+footer h3{
+    margin-bottom: 13px;
+    color: var(--cor_orange);
+    text-align: center;
+}
+
+footer a > img{
+    display: inline-block;
+    background-color: rgb(247, 244, 244);
+    padding: 9px;
+    border-radius: 50%;
+    overflow: visible;
+    width: 38px;
+    margin-left: 4px;
+}
+
+p > span.material-symbols-outlined{
+    position: relative;
+    top: 8px;
+    padding-right: 14px;
+    padding-bottom: 10px;
+}
+
+footer p{
+    font-size: 14.5px;
+}
