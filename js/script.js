@@ -34,4 +34,32 @@ function ocultarIcone(j) {
     span[j].style.visibility = "hidden"
 }
 
+function pesquisar() {
+    // Obtém o valor digitado na barra de pesquisa
+    var termoPesquisa = document.getElementById('search-bar').value.toLowerCase();
+
+    // Obtém todas as tags h3 com o id "produto"
+    var produtos = document.querySelectorAll('#produto');
+
+    // Itera sobre cada produto e verifica se o termo de pesquisa está contido no texto
+    produtos.forEach(function (produto) {
+        var textoProduto = produto.innerText.toLowerCase();
+        var paiProduto = produto.parentNode;
+
+        // Verifica se o termo de pesquisa está contido no texto do produto
+        if (textoProduto.includes(termoPesquisa)) {
+            // Se sim, exibe o produto
+            paiProduto.style.display = 'block';
+
+            // Role a página para o produto pesquisado
+            produto.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        } else {
+            // Se não, oculta o produto
+            paiProduto.style.display = 'none';
+        }
+    });
+}
 

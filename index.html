@@ -36,7 +36,7 @@
                     <span class="material-symbols-outlined">shopping_cart</span>
                 </a>
                 <!-- barra de pesquisa -->
-                <input type="text" maxlength="10" minlength="3" id="search-bar" placeholder="Pesquisar...">
+                <input type="text" maxlength="10" minlength="3" id="search-bar" placeholder="Pesquisar..." onkeyup="pesquisar()">
                 <span class="material-symbols-outlined">search</span>
             </menu>
         </nav>
@@ -58,7 +58,7 @@
                 </span>
 
                 <img src="img/celular_e_smartphone/iphone_15_128gb_preto.jpg" alt="iphone_15_128gb_preto">
-                <h3>iPhone 15 Apple 128GB Preto</h3>
+                <h3 id="produto">iPhone 15 Apple 128GB Preto</h3>
                 <p class="preco-cortado">R$ 7.299,00</p>
                 <p class="preco-desconto">R$ 6.569,10</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -76,7 +76,7 @@
 
                 <img src="img/celular_e_smartphone/samsung_galaxy_s23_ultra_256gb_preto.jpg"
                     alt="samsung_galaxy_s23_ultra_256gb_preto">
-                <h3>Smartphone Samsung Galaxy S23 Ultra 256GB Preto</h3>
+                <h3 id="produto">Smartphone Samsung Galaxy S23 Ultra 256GB Preto</h3>
                 <p class="preco-cortado">R$ 7.899,00</p>
                 <p class="preco-desconto">R$ 6.714,15</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -93,7 +93,7 @@
                 </span>
 
                 <img src="img/celular_e_smartphone/moto_g53_128gb_grafite.jpg" alt="moto_g53_128gb_grafite">
-                <h3>Smartphone Motorola Moto G53 5G 128GB Grafite</h3>
+                <h3 id="produto">Smartphone Motorola Moto G53 5G 128GB Grafite</h3>
                 <p class="preco-cortado">R$ 1.586,17</p>
                 <p class="preco-desconto">R$ 1.459,87</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -110,7 +110,7 @@
                 </span>
 
                 <img src="img/celular_e_smartphone/multi_flip_vita_azul.jpg" alt="multi_flip_vita_azul">
-                <h3>Celular Multi Flip Vita Azul</h3>
+                <h3 id="produto">Celular Multi Flip Vita Azul</h3>
                 <p class="preco-cortado">R$ 207,37</p>
                 <p class="preco-desconto">R$ 182,48</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -135,7 +135,7 @@
                 </span>
 
                 <img src="img/hardware/ssd_kingston_480gb.jpg" alt="ssd_kingston_480gb">
-                <h3>SSD 480 GB Kingston A400</h3>
+                <h3 id="produto">SSD 480 GB Kingston A400</h3>
                 <p class="preco-cortado">R$ 211,10</p>
                 <p class="preco-desconto">R$ 200,54</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -152,7 +152,7 @@
                 </span>
 
                 <img src="img/hardware/fonte_msi_mag_a650bn.jpg" alt="fonte_msi_mag_a650bn">
-                <h3>Fonte MSI MAG A650BN ATX 650W Preto</h3>
+                <h3 id="produto">Fonte MSI MAG A650BN ATX 650W Preto</h3>
                 <p class="preco-cortado">R$ 305,87</p>
                 <p class="preco-desconto">R$ 259,98</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -169,7 +169,7 @@
                 </span>
 
                 <img src="img/hardware/ram_kingston_fury_16gb.jpg" alt="ram_kingston_fury_16gb">
-                <h3>Memória Kingston Fury Beast 16GB 3200MHz DDR4 Preto</h3>
+                <h3 id="produto">Memória Kingston Fury Beast 16GB 3200MHz DDR4 Preto</h3>
                 <p class="preco-cortado">R$ 305,87</p>
                 <p class="preco-desconto">R$ 275,28</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -186,7 +186,7 @@
                 </span>
 
                 <img src="img/hardware/placa_video_pny_geforce_3050_8gb.jpg" alt="placa_vclasseo_pny_geforce_3050_8gb">
-                <h3>Placa de Vclasseo PNY GeForce RTX 3050 8GB UPRISING Dual Fan</h3>
+                <h3 id="produto">Placa de Vclasseo PNY GeForce RTX 3050 8GB UPRISING Dual Fan</h3>
                 <p class="preco-cortado">R$ 1.473,67</p>
                 <p class="preco-desconto">R$ 1.355,77</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -212,7 +212,7 @@
                 </span>
 
                 <img src="img/tv/smart_tv_55p_lg_4k.jpg" alt="smart_tv_55p_lg_4k">
-                <h3>Smart TV 55 Polegadas LG 4K UHD</h3>
+                <h3 id="produto">Smart TV 55 Polegadas LG 4K UHD</h3>
                 <p class="preco-cortado">R$ 2.526,31</p>
                 <p class="preco-desconto">R$ 2.274,12</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -229,7 +229,7 @@
                 </span>
 
                 <img src="img/tv/apple_tv_4k_3a_geracao_wifi_64gb.jpg" alt="apple_tv_4k_3a_geracao_wifi_64gb">
-                <h3>Apple TV 4K 3ª Geração Wi-Fi 64GB</h3>
+                <h3 id="produto">Apple TV 4K 3ª Geração Wi-Fi 64GB</h3>
                 <p class="preco-cortado">R$ 1.273,67</p>
                 <p class="preco-desconto">R$ 1.209,98</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -246,7 +246,7 @@
                 </span>
 
                 <img src="img/tv/tv3.jpg" alt="smart tv 50 polegadas samsung">
-                <h3>Smart TV 50 Polegadas Samsung Crystal UHD 4K</h3>
+                <h3 id="produto">Smart TV 50 Polegadas Samsung Crystal UHD 4K</h3>
                 <p class="preco-cortado">R$ 2.526,31</p>
                 <p class="preco-desconto">R$ 2.399,99</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -263,7 +263,7 @@
                 </span>
 
                 <img src="img/tv/tv4.jpg" alt="smart tv 32 polegadas AOC">
-                <h3>Smart TV 32 Polegadas AOC Roku HD LED</h3>
+                <h3 id="produto">Smart TV 32 Polegadas AOC Roku HD LED</h3>
                 <p class="preco-cortado">R$ 1.021,04</p>
                 <p class="preco-desconto">R$ 969,99</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -283,26 +283,26 @@
             <!-- filhos (marcas recomendadas) -->
             <div class="marcas">
                 <img src="img/recomendadas/xpg.jpeg" alt="">
-                <h3>XPG</h3>
+                <h3 id="produto">XPG</h3>
                 <a href="#">Ver produtos</a> <span class="material-symbols-outlined">
                     navigate_next
                 </span>
             </div>
             <div class="marcas">
                 <img src="img/recomendadas/corsair.jpeg" alt="">
-                <h3>CORSAIR</h3>
+                <h3 id="produto">CORSAIR</h3>
                 <a href="#">Ver produtos</a> <span class="material-symbols-outlined">navigate_next</span>
             </div>
             <div class="marcas">
                 <img src="img/recomendadas/logitech.jpeg" alt="">
-                <h3>LOGITECH</h3>
+                <h3 id="produto">LOGITECH</h3>
                 <a href="#">Ver produtos</a> <span class="material-symbols-outlined">
                     navigate_next
                 </span>
             </div>
             <div class="marcas">
                 <img src="img/recomendadas/husky.png" alt="">
-                <h3>KUSKY</h3>
+                <h3 id="produto">KUSKY</h3>
                 <a href="#">Ver produtos</a> <span class="material-symbols-outlined">
                     navigate_next
                 </span>
@@ -324,7 +324,7 @@
                 </span>
 
                 <img src="img/computador/note1.jpg" alt="Notebook Gamer Acer Nitro">
-                <h3>Notebook Gamer Acer Nitro AMD Ryzen 7-5800H</h3>
+                <h3 id="produto">Notebook Gamer Acer Nitro AMD Ryzen 7-5800H</h3>
                 <p class="preco-cortado">R$ 4.526,31</p>
                 <p class="preco-desconto">R$ 3.899,99</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -341,7 +341,7 @@
                 </span>
 
                 <img src="img/computador/note2.jpg" alt="Notebook Asus Vivobook 15">
-                <h3>Notebook Asus Vivobook 15 AMD Ryzen 5-4600H</h3>
+                <h3 id="produto">Notebook Asus Vivobook 15 AMD Ryzen 5-4600H</h3>
                 <p class="preco-cortado">R$ 2.947,36</p>
                 <p class="preco-desconto">R$ 2.399,99</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -358,7 +358,7 @@
                 </span>
 
                 <img src="img/computador/pc1.jpg" alt="Computador Completo Cpu Intel Core I7">
-                <h3>Computador Completo Cpu Intel Core I7 16Gb</h3>
+                <h3 id="produto">Computador Completo Cpu Intel Core I7 16Gb</h3>
                 <p class="preco-cortado">R$ 1.484,62</p>
                 <p class="preco-desconto">R$ 1.336,16</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -375,7 +375,7 @@
                 </span>
 
                 <img src="img/computador/pc2.jpg" alt="PC Gamer Fácil AMD Ryzen 5">
-                <h3>PC Gamer Fácil AMD Ryzen 5 5600g Radeon Vega 7</h3>
+                <h3 id="produto">PC Gamer Fácil AMD Ryzen 5 5600g Radeon Vega 7</h3>
                 <p class="preco-cortado">R$ 2.379,00</p>
                 <p class="preco-desconto">R$ 2.099,00</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -400,7 +400,7 @@
                 </span>
 
                 <img src="img/perifericos/camera.jpg" alt="Webcam Hayom AI1015 ">
-                <h3>Webcam Hayom AI1015 Full HD, 1080p</h3>
+                <h3 id="produto">Webcam Hayom AI1015 Full HD, 1080p</h3>
                 <p class="preco-cortado">R$ 50,58</p>
                 <p class="preco-desconto">R$ 37,99</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -417,7 +417,7 @@
                 </span>
 
                 <img src="img/perifericos/headset.jpg" alt="Headset Gamer Havit">
-                <h3>Headset Gamer Havit, Drivers 53mm</h3>
+                <h3 id="produto">Headset Gamer Havit, Drivers 53mm</h3>
                 <p class="preco-cortado">R$ 235,28</p>
                 <p class="preco-desconto">R$ 165,98</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -434,7 +434,7 @@
                 </span>
 
                 <img src="img/perifericos/mouse.jpg" alt="Mouse Sem Fio Gamer HyperX">
-                <h3>Mouse Sem Fio Gamer HyperX Pulsefire Dart</h3>
+                <h3 id="produto">Mouse Sem Fio Gamer HyperX Pulsefire Dart</h3>
                 <p class="preco-cortado">R$ 470,58</p>
                 <p class="preco-desconto">R$ 399,99</p>
                 <p class="texto-pix">À vista no PIX</p>
@@ -451,7 +451,7 @@
                 </span>
 
                 <img src="img/perifericos/teclado.jpg" alt="Teclado Mecânico Gamer">
-                <h3>Teclado Mecânico Gamer HyperX HX 60 </h3>
+                <h3 id="produto">Teclado Mecânico Gamer HyperX HX 60 </h3>
                 <p class="preco-cortado">R$ 470,58</p>
                 <p class="preco-desconto">R$ 399,99</p>
                 <p class="texto-pix">À vista no PIX</p>
