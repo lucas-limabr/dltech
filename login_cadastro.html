@@ -18,6 +18,7 @@
             <!-- menu -->
             <nav>
                 <menu>
+                    <a href="index.html">Home</a> <span>|</span>
                     <a href="monte_seu_pc.html">Monte o seu pc</a> <span>|</span>
                     <a href="categorias.html">Categorias</a> <span>|</span>
                     <a href="login_cadastro.html">Login/cadastro</a> <span>|</span>
@@ -45,19 +46,22 @@
                     <p class="texto-tipo-conta">Tipo de conta</p>
 
                     
+                    <div class="input-tipo-conta">
 
-                    <label for="pessoa-fisica">Pessoa física</label>
                     <input type="radio" class="input-radio" name="pessoa-fisica" id="pessoa-fisica">
-
+                    <label for="pessoa-fisica">Pessoa física</label>
+                    
+                    <input type="radio" class="input-radio" name="pessoa-juridica" id="pessoa-juridica"> 
                     <label for="pessoa-juridica">Pessoa jurídica</label>
-                    <input type="radio" class="input-radio" name="pessoa-juridica" id="pessoa-juridica">
-                
+                    
 
-
-                    <div class="redes-sociais">
-                            <a href="https://www.facebook.com/"><button class="botao-facebook">Cadastrar com o <b>Facebook</b></button></a>
-                            <a href="https://accounts.google.com/"><button class="botao-google">Cadastrar com o <b>Google</b></button></a>
-                            <a href="https://appleid.apple.com/"><button class="botao-apple">Cadastrar com a <b>Apple</b></button></a>
+                    </div>
+                    
+    
+                    <div class="redes-sociais-cadastro">
+                            <a href="https://www.facebook.com/"><button class="botao-facebook-cadastro"><img src="img/icones/facebook.png" alt="logo-facebook">Cadastrar com o <b>Facebook</b></button></a>
+                            <a href="https://accounts.google.com/"><button class="botao-google-cadastro"><img src="img/icones/google.png" alt="logo-google">Cadastrar com o <b>Google</b></button></a>
+                            <a href="https://appleid.apple.com/"><button class="botao-apple-cadastro"><img src="img/icones/apple.png" alt="logo-apple">Cadastrar com a <b>Apple</b></button></a>
                     </div>
 
                     <div class="ou">
@@ -67,32 +71,118 @@
                     <div class="textos">
 
                         <div class="nome-cpf">
-                            <input type="text" name="nome-completo" id="nome-completo" placeholder="Nome Completo*">
-                            <input type="text" name="cpf" id="cpf" placeholder="CPF*">
+                            <input type="text" name="nome-completo" id="nome-completo" placeholder="Nome Completo*" required>
+                            <input type="text" name="cpf" id="cpf" placeholder="CPF*" required>
                         </div>
     
                         <div class="data-telefone">
-                            <input type="date" name="data-nascimento" id="data-nascimento" placeholder="Data de nascimento*">
-                            <input type="tel" name="telefone-celular" id="telefone-celular" placeholder="Telefone celular*">
+                            <input type="date" name="data-nascimento" id="data-nascimento" placeholder="Data de nascimento*" required>
+                            <input type="tel" name="telefone-celular" id="telefone-celular" placeholder="Telefone celular*" required>
                         </div>
     
+
                         <div class="e-mail">
-                            <input type="email" name="e-mail" id="e-mail" placeholder="E-mail*">
+                            <input type="email" name="e-mail" id="e-mail" placeholder="E-mail*" required>
                         </div>
 
+                        <div class="senha">
+                            <input type="password" name="senha" id="senha" placeholder="Crie sua senha*" required>
+                            <input type="password" name="senha-confirmada" id="senha-confirmada" placeholder="Confirme sua senha" required>
+                        </div>
+
+                        <div class="onde-conheceu">
+                            <select name="onde-conheceu" id="onde-conheceu" required>
+                                <option value="" disabled selected>Onde você conheçeu a DLtech?*</option>
+                                <option value="google">Google</option>
+                                <option value="amigo">Indicação de amigo</option>
+                                <option value="youtube">YouTube</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                    <p class="texto-obrigatorio">(*) Campos obrigatórios</p>
+                    </div>
+                    
+                    <div class="checkbox-receber-info">
+                        <input type="checkbox" name="receber-informacoes" id="receber-informacoes"> 
+                        <p>Quero receber ofertas e novidades por e-mail, SMS, WhatsApp ou mensagens nos App's KaBuM!</p>
                     </div>
 
+                    <div class="checkbox-acordo">
+                        <input type="checkbox" name="esta-acordo" id="esta-acordo" required>
+                        <p>Li e estou de acordo com as políticas da empresa e políticas de privacidade.*</p>
+                    </div>
+                    
+
+                    <button type="submit">CADASTRAR</button>
                 </form>
             </div>
 
 
             <div class="login">
-                <h2>FAZER LOGIN</h2>
-            </div>
 
+                <h2>FAZER LOGIN</h2>
+
+               
+                    <form action="" method="POST" class="inputs-login">
+                        <input type="text" name="usuario" id="usuario" placeholder="E-mail, CPF ou CNPJ" required>
+                        <input type="password" name="senha-login" id="senha-login" placeholder="Senha" required>
+
+                        <button type="submit"><img src="img/icones/entrar.png" alt="porta-entrar">ENTRAR</button>
+                    </form>
+    
+                <a href="">Esqueceu a senha?</a>
+
+                <hr>
+
+                <p>Quero acessar com minhas redes sociais</p>
+
+                <div class="redes-sociais-login">
+                    <a href="https://www.facebook.com/"><button class="botao-facebook-login"><img src="img/icones/facebook.png" alt="logo-facebook">Facebook</button></a>
+                    <a href="https://accounts.google.com/"><button class="botao-google-login"><img src="img/icones/google.png" alt="logo-google">Google</button></a>
+                </div>
+            </div>
         </div>
     </main>
 
+    <!-- rodapé -->
+    <footer>
+        <!-- sobre -->
+        <div>
+            <a href="sobre.html">
+                <h3>Sobre nós</h3>
+            </a>
+        </div>
+        <hr>
+
+        <!-- mídias sociais -->
+        <div>
+            <h3>Mídias sociais</h3>
+            <a href="#"><img src="img/icones/instagram.png" alt="logo instagram"></a>
+            <a href="#"><img src="img/icones/youtube.png" alt="logo youtube"></a>
+            <a href="https://github.com/lucas-limabr/dltech" target="_blank"><img src="img/icones/github.png" alt="logo github"></a>
+        </div>
+        <hr>
+        <!-- atendimento -->
+        <div>
+            <h3>Atendimento</h3>
+            <div>
+                <p><span class="material-symbols-outlined">
+                    call
+                    </span> (32)98756-4554</p>
+                <p><span class="material-symbols-outlined">
+                    mail
+                    </span>faleconosco@dltech.com</p>
+                <p><span class="material-symbols-outlined">
+                    location_on
+                    </span>Juiz de Fora, MG</p>
+                <a href="https://encurtador.com.br/coMN0" target="_blank">
+                    <p>Rua Bernardo Mascarenhas, 1283</p>
+                </a>
+                <p>CNPJ: 05.397.266/0001-33</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -75,6 +75,25 @@ input+span {
     color: var(--cor_rich_black);
 }
 
+input::placeholder{
+    font-size: 14px;
+    padding: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], select{
+    padding: 5px;
+    border: solid 1px #7F858D;
+    border-radius: 5px;
+    width: 20pc;
+}
+
+input[type="date"], input[type="tel"]{
+    padding: 5px;
+    border: solid 1px #7F858D;
+    border-radius: 5px;
+    width: 20pc;
+}
+
 h2 {
     color: var(--cor_orange);
     font-size: 24px;
@@ -84,16 +103,38 @@ h2 {
 
 p {
     font-size: 14px;
+    color: var(--cor_gray);
+}
+
+.cadastro img, .login img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
 
 label {
     font-size: 14px;
 }
 
+button[type="submit"]{
+    background-color: var(--cor_orange);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 20pc;
+}
+
+button[type="submit"]:hover{
+    transition: 800ms;
+    background-color: #ef833c;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    text-align: center;
     padding: 10px;
 }
 
@@ -103,13 +144,28 @@ label {
 
 .texto-tipo-conta{
     color: gray;
+    display: flex;
 }
 
-.redes-sociais {
+.input-tipo-conta{
+    display: flex;
+    
+}
+
+#pessoa-fisica {
+    margin-right: 5px;
+}
+
+#pessoa-juridica {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.redes-sociais-cadastro {
     padding: 10px;
 }
 
-.botao-facebook {
+.botao-facebook-cadastro {
     background-color: white;
     padding: 5px;
     color: blue;
@@ -117,7 +173,7 @@ label {
     border-width: 1px;
 }
 
-.botao-google {
+.botao-google-cadastro {
     background-color: white;
     padding: 5px;
     color: red;
@@ -125,7 +181,7 @@ label {
     border-width: 1px;
 }
 
-.botao-apple {
+.botao-apple-cadastro {
     background-color: white;
     padding: 5px;
     border-width: 1px;
@@ -134,18 +190,168 @@ label {
 .ou {
     display: flex;
     align-items: center;
-    color: #555;
+    color: #d3d7dd;
 }
 
 .ou hr {
     flex: 1;
     border: none;
-    border-top: 1px solid #555;
+    border-top: 1px solid #d3d7dd;
     margin: 0 10px;
 }
 
 .textos{
+    padding: 10px;
+}
+
+
+.nome-cpf{
+    padding-bottom: 10px;
+}
+
+.data-telefone{
+    padding-bottom: 10px;
+}
+
+.e-mail{
+    padding-bottom: 10px;
+}
+
+
+.senha{
+    padding-bottom: 10px;
+}
+
+
+.texto-obrigatorio{
+    padding-bottom: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 12px;
+}
+
+.checkbox-receber-info{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.checkbox-receber-info p {
+    margin-left: 5px;
+}
+
+.checkbox-acordo{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.checkbox-acordo p {
+    margin-left: 5px;
+}
+
+#onde-conheceu{
+    padding: 5px;
+    border: solid 1px #7F858D;
+    border-radius: 5px;
+    width: 20pc;
+}
+
+
+.inputs-login input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login a {
+    display:flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    color: var(--cor_gray);
+}
+
+
+.login hr {
+    border: none;
+    border-top: 1px solid #d3d7dd;
+    margin-bottom: 10px;
+}
+
+.redes-sociais-login{
+    display: flex;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.login button {
+    display: inline-block;
+}
+
+
+
+.botao-facebook-login{
+    background-color: white;
+    padding: 5px;
+    color: blue;
+    border-color: blue;
+    border-width: 1px;
+    font-weight: bold;
+}
+
+.botao-google-login{
+    background-color: white;
+    padding: 5px;
+    color: red;
+    border-color: red;
+    border-width: 1px;
+    font-weight: bold;
+}
+
+
+footer{
+    
+    background-color: var(--cor_rich_black);
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 55px;
+    padding-bottom: 30px;
+    color: rgb(218, 214, 214);
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+footer a{
+    color: rgb(218, 214, 214);
+}
+
+footer a[href="https://encurtador.com.br/coMN0"]{
+    display: inline-block;
+    text-decoration: underline;
+    padding: 6.5px 0px;
+}
+
+footer h3{
+    margin-bottom: 13px;
+    color: var(--cor_orange);
+    text-align: center;
+}
+
+footer a > img{
+    display: inline-block;
+    background-color: rgb(247, 244, 244);
+    padding: 9px;
+    border-radius: 50%;
+    overflow: visible;
+    width: 38px;
+    margin-left: 4px;
+}
+
+p > span.material-symbols-outlined{
+    position: relative;
+    top: 8px;
+    padding-right: 14px;
+    padding-bottom: 10px;
+}
+
+footer p{
+    font-size: 14.5px;
 }
