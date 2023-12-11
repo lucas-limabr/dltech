@@ -12,29 +12,29 @@
 
 <body>
 
-    <main>
-        <header>
-            <h1>DLtech</h1>
-            <!-- menu -->
-            <nav>
-                <menu>
-                    <a href="index.html">Home</a> <span>|</span>
-                    <a href="monte_seu_pc.html">Monte o seu pc</a> <span>|</span>
-                    <a href="categorias.html">Categorias</a> <span>|</span>
-                    <a href="login_cadastro.html">Login/cadastro</a> <span>|</span>
-                    <a href="">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </a> <span>|</span>
-                    <a href="">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                    </a>
-                    <!-- barra de pesquisa -->
-                    <input type="text" maxlength="10" minlength="3" id="search-bar" placeholder="Pesquisar...">
-                    <span class="material-symbols-outlined">search</span>
-                </menu>
-            </nav>
-        </header>
+    <header>
+        <h1>DLtech</h1>
+        <!-- menu -->
+        <nav>
+            <menu>
+                <a href="index.html">Home</a> <span>|</span>
+                <a href="monte_seu_pc.html">Monte o seu pc</a> <span>|</span>
+                <a href="categorias.html">Categorias</a> <span>|</span>
+                <a href="login_cadastro.html">Login/cadastro</a> <span>|</span>
+                <a href="">
+                    <span class="material-symbols-outlined">favorite</span>
+                </a> <span>|</span>
+                <a href="">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </a>
+                <!-- barra de pesquisa -->
+                <input type="text" maxlength="10" minlength="3" id="search-bar" placeholder="Pesquisar...">
+                <span class="material-symbols-outlined">search</span>
+            </menu>
+        </nav>
+    </header>
 
+    <main>
         <div class="container">
 
             <div class="cadastro">
@@ -48,10 +48,10 @@
                     
                     <div class="input-tipo-conta">
 
-                    <input type="radio" class="input-radio" name="pessoa-fisica" id="pessoa-fisica">
+                    <input type="radio" class="input-radio" name="fisica_or_juridica" id="pessoa-fisica">
                     <label for="pessoa-fisica">Pessoa física</label>
                     
-                    <input type="radio" class="input-radio" name="pessoa-juridica" id="pessoa-juridica"> 
+                    <input type="radio" class="input-radio" name="fisica_or_juridica" id="pessoa-juridica"> 
                     <label for="pessoa-juridica">Pessoa jurídica</label>
                     
 
@@ -59,13 +59,13 @@
                     
     
                     <div class="redes-sociais-cadastro">
-                            <a href="https://www.facebook.com/"><button class="botao-facebook-cadastro"><img src="img/icones/facebook.png" alt="logo-facebook">Cadastrar com o <b>Facebook</b></button></a>
-                            <a href="https://accounts.google.com/"><button class="botao-google-cadastro"><img src="img/icones/google.png" alt="logo-google">Cadastrar com o <b>Google</b></button></a>
-                            <a href="https://appleid.apple.com/"><button class="botao-apple-cadastro"><img src="img/icones/apple.png" alt="logo-apple">Cadastrar com a <b>Apple</b></button></a>
+                            <a href="https://www.facebook.com/" target="_blank"><button class="botao-facebook-cadastro"><img src="img/icones/facebook.png" alt="logo-facebook">Cadastrar com o <b>Facebook</b></button></a>
+                            <a href="https://accounts.google.com/"><button class="botao-google-cadastro"><img src="img/icones/search.png" alt="logo-google">Cadastrar com o <b>Google</b></button></a>
+                            <a href="https://appleid.apple.com/"><button class="botao-apple-cadastro"><img src="img/icones/apple-logo.png" alt="logo-apple">Cadastrar com a <b>Apple</b></button></a>
                     </div>
 
                     <div class="ou">
-                       <hr><span>OU</span><hr> 
+                       <hr><span>ou</span><hr> 
                     </div>
                     
                     <div class="textos">
@@ -87,7 +87,7 @@
 
                         <div class="senha">
                             <input type="password" name="senha" id="senha" placeholder="Crie sua senha*" required>
-                            <input type="password" name="senha-confirmada" id="senha-confirmada" placeholder="Confirme sua senha" required>
+                            <input type="password" name="senha-confirmada" id="senha-confirmada" placeholder="Confirme sua senha*" required>
                         </div>
 
                         <div class="onde-conheceu">
@@ -128,18 +128,20 @@
                         <input type="text" name="usuario" id="usuario" placeholder="E-mail, CPF ou CNPJ" required>
                         <input type="password" name="senha-login" id="senha-login" placeholder="Senha" required>
 
-                        <button type="submit"><img src="img/icones/entrar.png" alt="porta-entrar">ENTRAR</button>
+                        <button type="submit"><span class="material-symbols-outlined">
+                            login
+                            </span>ENTRAR</button>
                     </form>
     
-                <a href="">Esqueceu a senha?</a>
+                <a href="#">Esqueceu a senha?</a>
 
                 <hr>
 
                 <p>Quero acessar com minhas redes sociais</p>
 
                 <div class="redes-sociais-login">
-                    <a href="https://www.facebook.com/"><button class="botao-facebook-login"><img src="img/icones/facebook.png" alt="logo-facebook">Facebook</button></a>
-                    <a href="https://accounts.google.com/"><button class="botao-google-login"><img src="img/icones/google.png" alt="logo-google">Google</button></a>
+                    <a href="https://www.facebook.com/" target="_blank"><button class="botao-facebook-login"><img src="img/icones/facebook.png" alt="logo-facebook">Facebook</button></a>
+                    <a href="https://accounts.google.com/" target="_blank"><button class="botao-google-login"><img src="img/icones/search.png" alt="logo-google">Google</button></a>
                 </div>
             </div>
         </div>

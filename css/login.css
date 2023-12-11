@@ -81,17 +81,21 @@ input::placeholder{
 }
 
 input[type="text"], input[type="password"], input[type="email"], select{
-    padding: 5px;
+   padding: 10px;
     border: solid 1px #7F858D;
     border-radius: 5px;
-    width: 20pc;
+    width: 49.6%;
+}
+
+input[type="email"]{
+    width: 99.6%;
 }
 
 input[type="date"], input[type="tel"]{
-    padding: 5px;
+    padding: 10px;
     border: solid 1px #7F858D;
     border-radius: 5px;
-    width: 20pc;
+    width: 49.6%;
 }
 
 h2 {
@@ -101,7 +105,7 @@ h2 {
     text-align: center;
 }
 
-p {
+main p {
     font-size: 14px;
     color: var(--cor_gray);
 }
@@ -114,16 +118,61 @@ p {
 
 label {
     font-size: 14px;
+    padding-right: 10px;
+    padding-top: 4px;
 }
+
+
+/* Esconder o input padrão */
+input[type="radio"] {
+    display: none;
+  }
+  
+  /* Estilizar a bolinha */
+  input[type="radio"] + label {
+    position: relative;
+    padding-left: 25px; /* Espaço para a nova bolinha */
+    cursor: pointer;
+  }
+  
+  input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 12px; /* Tamanho da nova bolinha */
+    height: 12px; /* Tamanho da nova bolinha */
+    border-radius: 50%;
+    border: 1px solid var(--cor_rich_black); /* Cor da borda da nova bolinha */
+  }
+  
+  /* Estilizar quando selecionado */
+  input[type="radio"]:checked + label::before {
+    background-color: var(--cor_orange); /* Cor de preenchimento da nova bolinha quando selecionada */
+  }
+
+  button{
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
 button[type="submit"]{
     background-color: var(--cor_orange);
     color: white;
     font-weight: bold;
     border: none;
-    border-radius: 5px;
     padding: 10px;
     width: 20pc;
+    margin-left: 28%;
+    margin-top: 8px;
+}
+
+.login button{
+    background-color: var(--cor_orange);
+    font-weight: bold;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 8px;
 }
 
 button[type="submit"]:hover{
@@ -132,14 +181,9 @@ button[type="submit"]:hover{
 }
 
 .container {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 10px;
-}
-
-.cadastro {
-    padding: 10px;
+    justify-content: space-evenly; 
 }
 
 .texto-tipo-conta{
@@ -161,13 +205,28 @@ button[type="submit"]:hover{
     margin-right: 5px;
 }
 
+.login h2{
+    margin-bottom: 11px;
+}
+
+.login{
+    width: 30%;
+    margin-left: 10px;
+}
+
 .redes-sociais-cadastro {
-    padding: 10px;
+    padding-top: 15px;
+   
+}
+
+.redes-sociais-cadastro img{
+   position: relative;
+   top: 3.5px;
 }
 
 .botao-facebook-cadastro {
     background-color: white;
-    padding: 5px;
+    padding: 7px;
     color: blue;
     border-color: blue;
     border-width: 1px;
@@ -175,7 +234,7 @@ button[type="submit"]:hover{
 
 .botao-google-cadastro {
     background-color: white;
-    padding: 5px;
+    padding: 7px;
     color: red;
     border-color: red;
     border-width: 1px;
@@ -183,7 +242,7 @@ button[type="submit"]:hover{
 
 .botao-apple-cadastro {
     background-color: white;
-    padding: 5px;
+    padding: 7px;
     border-width: 1px;
 }
 
@@ -191,6 +250,7 @@ button[type="submit"]:hover{
     display: flex;
     align-items: center;
     color: #d3d7dd;
+    padding: 10px 0px;
 }
 
 .ou hr {
@@ -199,11 +259,6 @@ button[type="submit"]:hover{
     border-top: 1px solid #d3d7dd;
     margin: 0 10px;
 }
-
-.textos{
-    padding: 10px;
-}
-
 
 .nome-cpf{
     padding-bottom: 10px;
@@ -222,9 +277,9 @@ button[type="submit"]:hover{
     padding-bottom: 10px;
 }
 
-
 .texto-obrigatorio{
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 30px;
     display: flex;
     font-size: 12px;
 }
@@ -248,15 +303,17 @@ button[type="submit"]:hover{
 }
 
 #onde-conheceu{
-    padding: 5px;
+    padding: 10px;
     border: solid 1px #7F858D;
     border-radius: 5px;
-    width: 20pc;
+    width: 99.6%;
+    color: #7F858D;
+    font-size: 14.5px;
 }
 
 
 .inputs-login input {
-    display: block;
+   width: 100%;
     margin-bottom: 10px;
 }
 
@@ -268,6 +325,16 @@ button[type="submit"]:hover{
     color: var(--cor_gray);
 }
 
+.login span{
+    padding-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+h2 ~ a{
+    text-decoration: underline;
+}
+
 
 .login hr {
     border: none;
@@ -275,29 +342,34 @@ button[type="submit"]:hover{
     margin-bottom: 10px;
 }
 
-.redes-sociais-login{
-    display: flex;
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-.login button {
-    display: inline-block;
+.redes-sociais-login button{
+   background-color: white;
+    width: 36%;
 }
 
 
+.redes-sociais-login a{
+    display: inline;
+    margin-right: 12px;
+}
+
+.redes-sociais-login img{
+    position: relative;
+    top: 4px;
+}
 
 .botao-facebook-login{
+    display: inline;
     background-color: white;
     padding: 5px;
-    color: blue;
+    color: rgb(6, 6, 129);
     border-color: blue;
     border-width: 1px;
     font-weight: bold;
 }
 
 .botao-google-login{
+    display: inline;
     background-color: white;
     padding: 5px;
     color: red;
@@ -306,9 +378,13 @@ button[type="submit"]:hover{
     font-weight: bold;
 }
 
+a{
+    text-decoration: none;
+}
 
+/* início do rodapé */
 footer{
-    
+    /* height: 280px; */
     background-color: var(--cor_rich_black);
     display: flex;
     justify-content: space-evenly;
