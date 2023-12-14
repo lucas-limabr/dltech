@@ -34,32 +34,39 @@ function ocultarIcone(j) {
     span[j].style.visibility = "hidden"
 }
 
+// FUNÇÃO DE PESQUISA DE PRODUTOS
 function pesquisar() {
-    // Obtém o valor digitado na barra de pesquisa
-    var termoPesquisa = document.getElementById('search-bar').value.toLowerCase();
+    var div_hover = document.getElementsByClassName('div-hover')
+    var barra_pesquisa = document.getElementById('search-bar').value
+    var titulos_produto = document.getElementsByClassName('title-produto')
+    var secao_produto = document.getElementsByClassName('secao-produto')
+    //console.log(`Seção: ${secao_produto.length}`)
+    var contador_erro
 
-    // Obtém todas as tags h3 com o id "produto"
-    var produtos = document.querySelectorAll('#produto');
+    //const PRODUTOS_IN_SECAO = 5;
+    if (barra_pesquisa.trim() !== '') {
+        var j = 0
+        var cont = 0
+        while (j < 4) {
 
-    // Itera sobre cada produto e verifica se o termo de pesquisa está contido no texto
-    produtos.forEach(function (produto) {
-        var textoProduto = produto.innerText.toLowerCase();
-        var paiProduto = produto.parentNode;
+            contador_erro = 1
+            for (let i = 0; i < secao_produto.length; i++) {
+               
 
-        // Verifica se o termo de pesquisa está contido no texto do produto
-        if (textoProduto.includes(termoPesquisa)) {
-            // Se sim, exibe o produto
-            paiProduto.style.display = 'block';
+                if (!titulos_produto[cont].innerHTML.toLowerCase().includes(barra_pesquisa.toLowerCase())) {
+                    div_hover[cont].style.display = "none"
+                }
 
-            // Role a página para o produto pesquisado
-            produto.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-            });
-        } else {
-            // Se não, oculta o produto
-            paiProduto.style.display = 'none';
+                cont++
+            }
+
+            if (contador_erro == 5) {
+                secao_produto[j].style.display = "none"
+            }
+
+            j++
         }
-    });
+    }
 }
+
 
