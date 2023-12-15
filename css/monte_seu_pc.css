@@ -1,0 +1,226 @@
+/* fonte do google fontes (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --cor_pumpkin: #F17A28;
+    --cor_green_blue: #0060B1;
+    --cor_orange: #FF6500;
+    --cor_rich_black: #0E1116;
+    --cor_outer_space: #42464D;
+    --cor_gray: #7F858D;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    height: 100vh;
+}
+
+/* início do cabeçalho */
+header>h1 {
+    background-color: var(--cor_green_blue);
+    padding: 25px 0px;
+    color: white;
+    text-align: center;
+}
+
+header>nav {
+    background-color: var(--cor_orange);
+}
+
+menu {
+    padding: 12px 0px 12px 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+menu>a {
+    color: white;
+    font-weight: bold;
+    padding: 0px 15px;
+}
+
+a>span {
+    position: relative;
+    top: 6px;
+}
+
+a~span {
+    color: white;
+}
+
+a>.material-symbols-outlined,
+.icons-hover>.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+menu>a:hover {
+    background-color: #ef833c;
+    padding: 10px;
+    transition: 350ms;
+}
+
+input#search-bar {
+    width: 180px;
+    border-radius: 15px;
+    float: right;
+    height: 27px;
+    margin-right: 5%;
+    border: none;
+    padding-left: 7px;
+}
+
+input+span {
+    position: absolute;
+    right: 5.5%;
+    color: var(--cor_rich_black);
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button {
+    width: 100%;
+    background-color: var(--cor_pumpkin);
+    border: none;
+    padding: 10px 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer; 
+}
+
+button:hover {
+    transition: 800ms;
+    background-color: #ff9d60;
+}
+
+.div-esquerdo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.section-botoes-perifericos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.selecao-processador {
+    display: flex;
+  }
+
+  .selecao-processador h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+  }
+
+  .produtos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .produto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .detalhes-produto {
+    width: 100%;
+  }
+  
+  .preco {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--cor_outer_space);
+  }
+  
+
+
+.selecao-processador hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+
+}
+
+.produtos img{
+    width: 20vh;
+}
+
+.selecao-placa{
+    display: flex;
+  }
+
+  .selecao-placa h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+  }
+
+  .selecao-placa hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+}
+
+.selecao-ram{
+    display: flex;
+  }
+
+  .selecao-ram h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+  }
+
+  .selecao-ram hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+}
+
+.div-direito {
+    padding: 20px;
+}
+
+.selecao-ssd{
+    display: flex;
+  }
+
+  .selecao-ssd h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+  }
+
+  .selecao-ssd hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+}
+
+.pecas-selecionadas hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+}
