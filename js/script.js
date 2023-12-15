@@ -37,36 +37,84 @@ function ocultarIcone(j) {
 // FUNÇÃO DE PESQUISA DE PRODUTOS
 function pesquisar() {
     var div_hover = document.getElementsByClassName('div-hover')
-    var barra_pesquisa = document.getElementById('search-bar').value
+    var barra_pesquisa = document.getElementById('search-bar').value.toLowerCase()
     var titulos_produto = document.getElementsByClassName('title-produto')
     var secao_produto = document.getElementsByClassName('secao-produto')
-    //console.log(`Seção: ${secao_produto.length}`)
-    var contador_erro
+    var titulo_secao = document.getElementsByClassName('title-secao')
+    var msg_nenhum_produto = document.getElementById('msg-nenhum-produto');
 
-    //const PRODUTOS_IN_SECAO = 5;
     if (barra_pesquisa.trim() !== '') {
         var j = 0
         var cont = 0
-        while (j < 4) {
+        var exibir_secao
+        var sem_correspondencia = 0
+        document.getElementById('titulo-marcas').style.display = "none"
+        document.getElementById('secao-marcas').style.display = "none"
 
-            contador_erro = 1
-            for (let i = 0; i < secao_produto.length; i++) {
-               
+        while (j < secao_produto.length) {
 
-                if (!titulos_produto[cont].innerHTML.toLowerCase().includes(barra_pesquisa.toLowerCase())) {
+            exibir_secao = false
+            for (let i = 0; i < 4; i++) {
+
+
+                if (!titulos_produto[cont].innerHTML.toLocaleLowerCase().includes(barra_pesquisa)) {
                     div_hover[cont].style.display = "none"
+                    sem_correspondencia++
                 }
-
+                else {
+                    exibir_secao = true
+                    secao_produto[j].style.justifyContent = "flex-start"
+                    div_hover[cont].style.display = "block"
+                    div_hover[cont].style.marginLeft = "50px"
+                }
                 cont++
             }
 
-            if (contador_erro == 5) {
+            if (exibir_secao) {
+                secao_produto[j].style.display = "flex"
+                titulo_secao[j].style.display = "block"
+            }
+            else {
                 secao_produto[j].style.display = "none"
+                titulo_secao[j].style.display = "none"
             }
 
             j++
         }
     }
+    else {
+        document.getElementById('titulo-marcas').style.display = "block"
+        document.getElementById('secao-marcas').style.display = "flex"
+
+        let j = 0
+        for (let i = 0; i < div_hover.length; i++) {
+            div_hover[i].style.display = "block"
+            div_hover[i].style.marginLeft = "0px"
+        }
+        while (j < secao_produto.length) {
+            secao_produto[j].style.display = "flex"
+            secao_produto[j].style.justifyContent = "space-evenly"
+            titulo_secao[j].style.display = "block"
+
+            j++
+        }
+    }
+
+    if (sem_correspondencia === 20) {
+        // Verifica se a mensagem já foi adicionada antes de inserir novamente
+        if (!msg_nenhum_produto) {
+            var h2 = document.createElement('h2');
+            h2.id = 'msg-nenhum-produto';
+            h2.appendChild(document.createTextNode('Nenhum produto encontrado'));
+            h2.style.backgroundColor = "white"
+            h2.style.color = "black"
+
+            var main = document.querySelector('main');
+            main.appendChild(h2);
+        }
+    }
+    // Remove a mensagem se houver correspondência
+    if (msg_nenhum_produto && sem_correspondencia != 20) {
+        msg_nenhum_produto.remove();
+    }
 }
-
-
