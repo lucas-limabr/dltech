@@ -28,55 +28,79 @@ function emitirAlerta(radio) {
 }
 
 function calcularTotal() {
-  var total = 0;
+    var total = 0;
 
-  // Seleciona todos os inputs do tipo radio que estão selecionados
-  var produtosSelecionados = document.querySelectorAll(
-    "input[type=radio]:checked"
-  );
+    // Seleciona todos os inputs do tipo radio que estão selecionados
+    var produtosSelecionados = document.querySelectorAll(
+        "input[type=radio]:checked"
+    );
 
-  // Itera sobre os inputs selecionados e adiciona os valores ao total
-  produtosSelecionados.forEach(function (input) {
-    // Encontra o span com a classe "valor" dentro do mesmo div que o input
-    var spanValor = input.parentElement.querySelector(".valor");
+    // Cria um objeto para armazenar o total de cada tipo de componente
+    var totalPorComponente = {};
 
-    var valorTexto = spanValor.textContent
-      .replace("R$ ", "")
-      .replace(".", "")
-      .replace(",", ".");
-    var valor = parseFloat(valorTexto);
-    total += valor;
-  });
+    // Itera sobre os inputs selecionados e adiciona os valores ao total
+    produtosSelecionados.forEach(function (input) {
+        // Encontra o span com a classe "valor" dentro do mesmo div que o input
+        var spanValor = input.parentElement.querySelector(".valor");
 
-  // Atualiza o valor total na div com id "valor-total"
-  var totalFormatado =
-    "R$ " +
-    total.toLocaleString("pt-BR", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
+        var valorTexto = spanValor.textContent
+            .replace("R$ ", "")
+            .replace(".", "")
+            .replace(",", ".");
+        var valor = parseFloat(valorTexto);
+
+        // Encontra o input de quantidade
+        var inputQuantidade = input.parentElement.querySelector("#quantidade");
+        var quantidade = parseInt(inputQuantidade.value);
+
+        // Multiplica o valor pela quantidade e adiciona ao total
+        total += valor * quantidade;
+
+        // Obtém o tipo de componente
+        var componente = input.getAttribute("name");
+
+        // Verifica se o tipo de componente já existe no objeto totalPorComponente
+        if (totalPorComponente[componente]) {
+            // Se existir, adiciona o valor multiplicado pela quantidade
+            totalPorComponente[componente] += valor * quantidade;
+        } else {
+            // Se não existir, cria uma nova propriedade com o valor multiplicado pela quantidade
+            totalPorComponente[componente] = valor * quantidade;
+        }
     });
-  document.getElementById("valor-total").textContent = totalFormatado;
+
+    // Atualiza o valor total na div com id "valor-total"
+    var totalFormatado =
+        "R$ " +
+        total.toLocaleString("pt-BR", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        });
+    document.getElementById("valor-total").textContent = totalFormatado;
+
+    // Exibe o total de cada tipo de componente
+    console.log(totalPorComponente);
 }
 
 // Adicione um ouvinte de evento para cada botão de opção
 document.querySelectorAll("input[type=radio]").forEach(function (radioButton) {
-  radioButton.addEventListener("change", calcularTotal);
+    radioButton.addEventListener("change", calcularTotal);
 });
 
 function copiarDadosSelecionados() {
-  var sectionPecasSelecionadas = document.querySelector(".pecas-selecionadas");
-  var produtosSelecionados = document.querySelectorAll(
-    'input[type="radio"]:checked'
-  );
+    var sectionPecasSelecionadas = document.querySelector(".pecas-selecionadas");
+    var produtosSelecionados = document.querySelectorAll(
+        'input[type="radio"]:checked'
+    );
 
-  // Limpa o conteúdo da section
-  sectionPecasSelecionadas.innerHTML = "";
+    // Limpa o conteúdo da section
+    sectionPecasSelecionadas.innerHTML = "";
 
-  // Itera sobre os produtos selecionados e adiciona clones à section
-  produtosSelecionados.forEach(function (radioButton) {
-    var produtoSelecionado = radioButton.parentNode.cloneNode(true);
-    sectionPecasSelecionadas.appendChild(produtoSelecionado);
-  });
+    // Itera sobre os produtos selecionados e adiciona clones à section
+    produtosSelecionados.forEach(function (radioButton) {
+        var produtoSelecionado = radioButton.parentNode.cloneNode(true);
+        sectionPecasSelecionadas.appendChild(produtoSelecionado);
+    });
 }
 
 function atualizarProgressoCircular() {

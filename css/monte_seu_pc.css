@@ -108,6 +108,17 @@ main p {
 
 }
 
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-left: 5vh;
+}
+
+
 
 button:hover {
     transition: 800ms;
@@ -173,12 +184,18 @@ button:hover {
 }
 
 .produto div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin-left: 5vh;
 }
 
 
-.detalhes-produto {
-    width: 100%;
+.preco-quantidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5vh;
 }
 
 .preco {
@@ -186,6 +203,7 @@ button:hover {
     font-size: 14px;
     color: var(--cor_outer_space);
 }
+
 
 .selecao-processador hr {
     width: 100%;
