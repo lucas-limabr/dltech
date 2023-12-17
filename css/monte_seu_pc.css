@@ -95,7 +95,7 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 
-main h3{
+main h3 {
     font-size: 18px;
     color: var(--cor_orange);
     margin-bottom: 10px;
@@ -125,21 +125,22 @@ button:hover {
     background-color: #ff9d60;
 }
 
-.div-esquerdo{
+.div-esquerdo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.div-botoes{
+.div-botoes {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    margin-top: 5vh;
+    margin-top: 2vh;
     text-align: center;
+    gap: 10px;
 }
 
-.div-botoes button{
+.div-botoes button {
     width: 20vh;
     background-color: var(--cor_pumpkin);
     border: none;
@@ -151,11 +152,15 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.div-botoes button:hover {
+    transition: 800ms;
+    background-color: #ff9d60;
+}
 
-.titulo-monte-pc{
+.titulo-monte-pc {
     font-size: 30px;
     color: var(--cor_orange);
-    margin-top: 5vh;
+    margin-top: 4vh;
     text-align: center;
 }
 
@@ -183,7 +188,7 @@ button:hover {
     border: 2px solid var(--cor_orange);
 }
 
-.produto div{
+.produto div {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -191,7 +196,7 @@ button:hover {
 }
 
 
-.preco-quantidade{
+.preco-quantidade {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -222,7 +227,7 @@ button:hover {
     color: var(--cor_outer_space);
 }
 
-.produtos{
+.produtos {
     padding-top: 5vh;
 }
 
@@ -297,14 +302,14 @@ button:hover {
     display: inline-block;
 }
 
-.titulo-selecionadas{
+.titulo-selecionadas {
     font-size: 30px;
     color: var(--cor_orange);
     margin-top: 2vh;
     text-align: center;
     margin-left: 5vh;
 }
- 
+
 .barra-progresso-circular-0-4 {
     display: flex;
     flex-direction: column;
@@ -318,7 +323,8 @@ button:hover {
 .progresso-circular-0-4 svg {
     width: 140px;
     height: 140px;
-    overflow: visible; /* Add this line to prevent clipping */
+    overflow: visible;
+    /* Add this line to prevent clipping */
 }
 
 .progresso-circular-0-4 circle {
@@ -351,7 +357,7 @@ button:hover {
     margin-top: 10px;
 }
 
-.pecas-selecionadas{
+.pecas-selecionadas {
     padding: 10px;
 }
 
@@ -369,6 +375,14 @@ button:hover {
 .pecas-selecionadas img {
     width: 15vh;
     margin-left: 2vh;
+}
+
+.quantidade-selecionada {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+    font-weight: bold;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .div-total {
@@ -393,7 +407,7 @@ button:hover {
     font-size: 20px;
 }
 
-.botao-comprar{
+.botao-comprar {
     width: 20vh;
     background-color: var(--cor_pumpkin);
     border: none;
