@@ -1,0 +1,470 @@
+/* fonte do google fontes (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --cor_pumpkin: #F17A28;
+    --cor_green_blue: #0060B1;
+    --cor_orange: #FF6500;
+    --cor_rich_black: #0E1116;
+    --cor_outer_space: #42464D;
+    --cor_gray: #7F858D;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    height: 100vh;
+}
+
+/* início do cabeçalho */
+header>h1 {
+    background-color: var(--cor_green_blue);
+    padding: 25px 0px;
+    color: white;
+    text-align: center;
+}
+
+header>nav {
+    background-color: var(--cor_orange);
+}
+
+menu {
+    padding: 12px 0px 12px 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+menu>a {
+    color: white;
+    font-weight: bold;
+    padding: 0px 15px;
+}
+
+a>span {
+    position: relative;
+    top: 6px;
+}
+
+a~span {
+    color: white;
+}
+
+a>.material-symbols-outlined,
+.icons-hover>.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+menu>a:hover {
+    background-color: #ef833c;
+    padding: 10px;
+    transition: 350ms;
+}
+
+input#search-bar {
+    width: 180px;
+    border-radius: 15px;
+    float: right;
+    height: 27px;
+    margin-right: 5%;
+    border: none;
+    padding-left: 7px;
+}
+
+input+span {
+    position: absolute;
+    right: 5.5%;
+    color: var(--cor_rich_black);
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main h3 {
+    font-size: 18px;
+    color: var(--cor_orange);
+    margin-bottom: 10px;
+
+}
+
+main p {
+    font-size: 12px;
+    color: var(--cor_outer_space);
+
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-left: 5vh;
+}
+
+
+
+button:hover {
+    transition: 800ms;
+    background-color: #ff9d60;
+}
+
+.div-esquerdo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.div-botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2vh;
+    text-align: center;
+    gap: 10px;
+}
+
+.div-botoes button {
+    width: 20vh;
+    background-color: var(--cor_pumpkin);
+    border: none;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.div-botoes button:hover {
+    transition: 800ms;
+    background-color: #ff9d60;
+}
+
+.titulo-monte-pc {
+    font-size: 30px;
+    color: var(--cor_orange);
+    margin-top: 4vh;
+    text-align: center;
+}
+
+
+.selecao-processador {
+    display: flex;
+}
+
+.selecao-processador h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.produto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    padding: 10px;
+    border: 2px solid var(--cor_orange);
+}
+
+.produto div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5vh;
+}
+
+
+.preco-quantidade {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5vh;
+}
+
+.preco {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--cor_outer_space);
+}
+
+
+.selecao-processador hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+
+}
+
+.produtos img {
+    width: 20vh;
+    margin-left: 2vh;
+}
+
+.produtos h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+}
+
+.produtos {
+    padding-top: 5vh;
+}
+
+.marca {
+    font-size: 12px;
+    color: var(--cor_gray);
+    font-weight: bold;
+}
+
+.selecao-placa-mae {
+    display: flex;
+}
+
+.selecao-placa-mae h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+}
+
+.selecao-placa-mae hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+}
+
+.selecao-ram {
+    display: flex;
+}
+
+.selecao-ram h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+}
+
+.selecao-ram hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+}
+
+.div-direito {
+    padding: 20px;
+    margin-left: 5vh;
+}
+
+.selecao-ssd {
+    display: flex;
+}
+
+.selecao-ssd h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+}
+
+.selecao-ssd hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+}
+
+.preco {
+    font-size: 16px;
+    color: var(--cor_orange);
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 5vh;
+}
+
+.valor {
+    font-size: 16px;
+    color: var(--cor_orange);
+    font-weight: bold;
+    display: inline-block;
+}
+
+.titulo-selecionadas {
+    font-size: 30px;
+    color: var(--cor_orange);
+    margin-top: 2vh;
+    text-align: center;
+    margin-left: 5vh;
+}
+
+.barra-progresso-circular-0-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.progresso-circular-0-4 svg {
+    width: 140px;
+    height: 140px;
+    overflow: visible;
+    /* Add this line to prevent clipping */
+}
+
+.progresso-circular-0-4 circle {
+    fill: none;
+    stroke: var(--cor_gray);
+    stroke-width: 10;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.progresso-circular-0-4 .numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.progresso-circular-0-4 .numero h2 {
+    font-size: 16px;
+    color: var(--cor_outer_space);
+    margin: 0 5px;
+}
+
+.progresso-circular-0-4 h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+    margin-top: 10px;
+}
+
+.pecas-selecionadas {
+    padding: 10px;
+}
+
+.pecas-selecionadas h2 {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+}
+
+.pecas-selecionadas hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid var(--cor_gray);
+}
+
+.pecas-selecionadas img {
+    width: 15vh;
+    margin-left: 2vh;
+}
+
+.quantidade-selecionada {
+    font-size: 14px;
+    color: var(--cor_outer_space);
+    font-weight: bold;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.div-total {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor_green_blue);
+    color: white;
+    font-weight: bold;
+}
+
+.div-total h2 {
+    font-size: 18px;
+}
+
+.div-total p {
+    font-size: 20px;
+}
+
+.botao-comprar {
+    width: 20vh;
+    background-color: var(--cor_pumpkin);
+    border: none;
+    padding: 10px 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+/* início do rodapé */
+footer {
+    /* height: 280px; */
+    background-color: var(--cor_rich_black);
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 55px;
+    padding-bottom: 30px;
+    color: rgb(218, 214, 214);
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+footer a {
+    color: rgb(218, 214, 214);
+}
+
+footer a[href="https://encurtador.com.br/coMN0"] {
+    display: inline-block;
+    text-decoration: underline;
+    padding: 6.5px 0px;
+}
+
+footer h3 {
+    margin-bottom: 13px;
+    color: var(--cor_orange);
+    text-align: center;
+}
+
+footer a>img {
+    display: inline-block;
+    background-color: rgb(247, 244, 244);
+    padding: 9px;
+    border-radius: 50%;
+    overflow: visible;
+    width: 38px;
+    margin-left: 4px;
+}
+
+p>span.material-symbols-outlined {
+    position: relative;
+    top: 8px;
+    padding-right: 14px;
+    padding-bottom: 10px;
+}
+
+footer p {
+    font-size: 14.5px;
+}
