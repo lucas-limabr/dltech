@@ -118,3 +118,38 @@ function pesquisar() {
         msg_nenhum_produto.remove();
     }
 }
+
+// CARRINHO
+document.getElementsByClassName('btn-comprar').forEach(button => {
+    button.addEventListener('click', function(){
+        //pega informações do produto
+        const productName = document.getElementsByClassName('title-produto').innerText
+        const productImage = this.parentNode.querySelector('img').src
+        const productPrice = document.getElementsByClassName('preco-desconto').innerText
+        
+        // Cria um objeto com os detalhes do produto
+        const product = {
+            name: productName,
+            image: productImage,
+            price: productPrice
+        };
+
+        // Verifica se já existe um carrinho no localStorage
+        let cart = localStorage.getItem('cart')
+
+        if(!cart){
+            cart = []
+        }
+        else{
+           // Se existir, converte o JSON para um array
+           cart = JSON.parse(cart) 
+        }
+
+        cart.push(product)
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Redireciona para a página do carrinho
+        window.location.href = 'carrinho.html';
+    })
+});
