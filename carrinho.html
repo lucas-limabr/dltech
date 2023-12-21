@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
+
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="css/carrinho.css">
 </head>
+
 <body>
 
-    <div id="cart-items">
+    <header>
+        <a href="index.html">
+            <h1>DLtech</h1>
+        </a>
+    </header>
 
-    </div>
+    <main>
+        <div id="endereco">
+            <div id="title-endereco">
+                <span class="material-symbols-outlined">
+                    location_on
+                </span>
+                <h2>Selecione o endereço
+            </div>
+
+            <div id="box-cep">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" placeholder="Digite o CEP" onkeyup="formataCep(this)">
+                <button onclick="buscarCEP()">Buscar</button>
+                <div id="resultado">
+                    <!-- Aqui será exibido o resultado da busca -->
+                </div>
+            </div>
+        </div>
+
+        <!-- título "Marcas recomendadas" -->
+        <h2 id="title-carrinho">Produtos do carrinho</h2>
+
+        <div id="cart-items"></div>
+    </main>
+
+    <aside>
+        <h2>Resumo:</h2>
+
+        <h3>Frete: grátis</h3>
+        <h3>Valor total: R$<span id="valor_tot"></span></h3>
+
+        <button>Ir para o pagamento</button>
+    </aside>
+
+     <!-- rodapé -->
+     <footer>
+        <!-- sobre -->
+        <div>
+            <a href="sobre.html">
+                <h3>Sobre nós</h3>
+            </a>
+        </div>
+        <hr>
+
+        <!-- mídias sociais -->
+        <div>
+            <h3>Mídias sociais</h3>
+            <a href="#"><img src="img/icones/instagram.png" alt="logo instagram"></a>
+            <a href="#"><img src="img/icones/youtube.png" alt="logo youtube"></a>
+            <a href="https://github.com/lucas-limabr/dltech" target="_blank"><img src="img/icones/github.png" alt="logo github"></a>
+        </div>
+        <hr>
+        <!-- atendimento -->
+        <div>
+            <h3>Atendimento</h3>
+            <div>
+                <p><span class="material-symbols-outlined">
+                    call
+                    </span> (32)98756-4554</p>
+                <p><span class="material-symbols-outlined">
+                    mail
+                    </span>faleconosco@dltech.com</p>
+                <p><span class="material-symbols-outlined">
+                    location_on
+                    </span>Juiz de Fora, MG</p>
+                <a href="https://encurtador.com.br/coMN0" target="_blank">
+                    <p>Rua Bernardo Mascarenhas, 1283</p>
+                </a>
+                <p>CNPJ: 05.397.266/0001-33</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/carrinho.js"></script>
-    
+
 </body>
+
 </html>

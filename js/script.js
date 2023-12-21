@@ -120,13 +120,13 @@ function pesquisar() {
 }
 
 // CARRINHO
-document.getElementsByClassName('btn-comprar').forEach(button => {
+    document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', function(){
         //pega informações do produto
-        const productName = document.getElementsByClassName('title-produto').innerText
+        const productName = this.parentNode.querySelector('.title-produto').innerHTML
         const productImage = this.parentNode.querySelector('img').src
-        const productPrice = document.getElementsByClassName('preco-desconto').innerText
-        
+        const productPrice = this.parentNode.querySelector('.preco-desconto').innerHTML
+
         // Cria um objeto com os detalhes do produto
         const product = {
             name: productName,
