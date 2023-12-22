@@ -5,7 +5,6 @@ const cart = JSON.parse(localStorage.getItem('cart'))
 if (cart && cart.length > 0) {
     const cartItemsdiv = document.getElementById('cart-items')
 
-
     // Itera sobre os produtos no carrinho e os exibe na página
     cart.forEach(product => {
         const productDiv = document.createElement('div')
@@ -48,10 +47,6 @@ if (cart && cart.length > 0) {
         productDiv.appendChild(productImage)
 
         cartItemsdiv.appendChild(productDiv)
-
-        let valor_tot = document.getElementById('valor_tot')
-        let valor_monetario
-        valor_tot.innerText += `${product.price} * ${Number(qtd_produto.value)}`   
 
     });
 } else {
