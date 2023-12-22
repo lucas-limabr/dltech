@@ -1,0 +1,73 @@
+
+@media screen and (max-width: 767px) {
+    menu > a{
+        display: block;
+        border: 1px solid rgb(172, 164, 164);
+        padding: 6px;
+        text-align: center;
+        
+    }
+
+    #menu_hamburguer {
+        display: block;
+    }
+
+    menu{
+        padding: 0px;
+    }
+
+    menu > span{
+        display: none;
+    }
+
+    input#search-bar {
+        width: 30%;
+        border-radius: 15px;
+        float: right;
+        height: 27px;
+        text-align: center;
+        border: 1px solid black;
+        padding-left: 7px;
+        margin-top: 1px;
+    }
+
+    section{
+        display: block;
+        height: fit-content;
+    }
+
+    section>div {
+        background: white;
+        width: 290px;
+        margin: auto;
+        height: 420px;
+        margin-bottom: 20px;
+    }
+
+    section#secao-marcas  {
+        height: fit-content;
+     }
+
+     .marcas{
+        width: 290px; 
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #atendimento{
+        text-align: center;
+    }
+
+    #sociais{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    footer h3{
+        margin: 20px 0px;
+    }
+} 
+    

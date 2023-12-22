@@ -120,8 +120,8 @@ function pesquisar() {
 }
 
 // CARRINHO
-    document.querySelectorAll('button').forEach(button => {
-    button.addEventListener('click', function(){
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', function () {
         //pega informações do produto
         const productName = this.parentNode.querySelector('.title-produto').innerHTML
         const productImage = this.parentNode.querySelector('img').src
@@ -137,12 +137,12 @@ function pesquisar() {
         // Verifica se já existe um carrinho no localStorage
         let cart = localStorage.getItem('cart')
 
-        if(!cart){
+        if (!cart) {
             cart = []
         }
-        else{
-           // Se existir, converte o JSON para um array
-           cart = JSON.parse(cart) 
+        else {
+            // Se existir, converte o JSON para um array
+            cart = JSON.parse(cart)
         }
 
         cart.push(product)
@@ -153,3 +153,23 @@ function pesquisar() {
         window.location.href = 'carrinho.html';
     })
 });
+
+function alteraTamnho() {
+    let menu = document.getElementById('menu')
+
+    if (window.innerWidth >= 768) {
+        menu.style.display = "block"
+    }
+    else {
+        menu.style.display = "none"
+    }
+}
+
+function clicarMenu() {
+    if (menu.style.display == 'none') {
+        menu.style.display = 'block';
+    }
+    else{
+        menu.style.display = 'none';
+    }
+}

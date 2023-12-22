@@ -34,7 +34,17 @@ header>nav {
     background-color: var(--cor_orange);
 }
 
+#menu_hamburguer{
+    display: none;
+    background-color: rgb(35, 35, 35);
+    width: 100vw;
+    color: white;
+    text-align: center;
+    padding: 6px 0px;
+}
+
 menu {
+    display: block;
     padding: 12px 0px 12px 25px;
 }
 
@@ -303,4 +313,12 @@ p > span.material-symbols-outlined{
 
 footer p{
     font-size: 14.5px;
+}
+
+#copy{
+    background-color: var(--cor_rich_black);
+    padding: 12px; 
+    color: rgb(218, 214, 214);
+    border-top: 1px solid rgb(242, 232, 213);
+    text-align: center;
 }

@@ -9,6 +9,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- media query -->
+    <link rel="stylesheet" href="css/media_query.css">
+
     <!-- Google Icons -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -21,7 +24,9 @@
         <h1>DLtech</h1>
         <!-- menu -->
         <nav>
-            <menu>
+            <span id="menu_hamburguer" onclick="clicarMenu()" class="material-symbols-outlined">menu
+            </span>
+            <menu id="menu">
                 <a href="index.html">Home</a> <span>|</span>
                 <a href="monte_seu_pc.html">Monte o seu pc</a> <span>|</span>
                 <a href="categorias.html">Categorias</a> <span>|</span>
@@ -470,7 +475,7 @@
         <hr>
 
         <!-- mídias sociais -->
-        <div>
+        <div id="sociais">
             <h3>Mídias sociais</h3>
             <a href="#"><img src="img/icones/instagram.png" alt="logo instagram"></a>
             <a href="#"><img src="img/icones/youtube.png" alt="logo youtube"></a>
@@ -480,7 +485,7 @@
         <!-- atendimento -->
         <div>
             <h3>Atendimento</h3>
-            <div>
+            <div id="atendimento">
                 <p><span class="material-symbols-outlined">
                     call
                     </span> (32)98756-4554</p>
@@ -497,6 +502,10 @@
             </div>
         </div>
     </footer>
+
+    <p id="copy">
+        Site criado por Lucas e Bernardo - &copy; Todos os direitos reservados
+    </p>
 
     <!-- JS-->
     <script src="js/script.js"></script>
