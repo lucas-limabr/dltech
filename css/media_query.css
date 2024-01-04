@@ -1,4 +1,3 @@
-
 @media screen and (max-width: 767px) {
     menu > a{
         display: block;
@@ -32,14 +31,15 @@
     }
 
     section{
-        display: block;
+        flex-wrap: wrap;
         height: fit-content;
+        justify-content: space-evenly;
     }
 
     section>div {
         background: white;
         width: 290px;
-        margin: auto;
+        margin-right: 10px;
         height: 420px;
         margin-bottom: 20px;
     }
@@ -53,8 +53,17 @@
     }
 
     footer {
-        display: flex;
-        flex-direction: column;
+       flex-direction: column;
+       align-content: center;  
+       padding: 0px;
+    }
+
+    footer h3{
+        margin: 0px;
+    }
+
+    footer div{
+        padding: 22px 0px;
     }
 
     #atendimento{
@@ -62,12 +71,6 @@
     }
 
     #sociais{
-        margin-bottom: 10px;
         text-align: center;
     }
-
-    footer h3{
-        margin: 20px 0px;
-    }
 } 
-    

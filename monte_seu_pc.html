@@ -37,272 +37,238 @@
     </header>
 
     <main>
+        <h2 class="titulo-monte-pc">Monte seu PC</h2>
 
-        <div class="div-esquerdo">
-            <h2 class="titulo-monte-pc">Monte seu PC</h2>
-
-            <div class="div-botoes">
-                <a href="#texto-processador"><button>Processador</button></a>
-                <a href="#texto-placa-mae"><button>Placa mãe</button></a>
-                <a href="#texto-ram"><button>Memória RAM</button></a>
-                <a href="#texto-ssd"><button>SSD</button></a>
+        <section id="principal">
+            <div class="div-esquerdo">
+                <div class="div-botoes">
+                    <a href="#texto-processador"><button>Processador</button></a>
+                    <a href="#texto-placa-mae"><button>Placa mãe</button></a>
+                    <a href="#texto-ram"><button>Memória RAM</button></a>
+                    <a href="#texto-ssd"><button>SSD</button></a>
+                </div>
+                <section class="selecao-processador">
+                    <div class="produtos">
+                        <h3 id="texto-processador">Processador</h3>
+                        <div class="produto">
+                            <input type="radio" name="processador" id="ryzen-7">
+                            <img src="img/monte-seu-pc/cpu1.jpg" alt="ryzen-7">
+                            <div>
+                                <p class="marca">AMD</p>
+                                <h2>AMD Ryzen 7 5700X, 3.4GHz (4.6GHz Max Turbo), Cache 36MB, AM4</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">1.097,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="radio" name="processador" id="intel-i5">
+                            <img src="img/monte-seu-pc/cpu2.jpg" alt="intel-i5">
+                            <div>
+                                <p class="marca">Intel</p>
+                                <h2>Processador Intel Core i5-12400, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, LGA 1700
+                                </h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">1.098,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="radio" name="processador" id="ryzen-5">
+                            <img src="img/monte-seu-pc/cpu3.jpg" alt="ryzen-5">
+                            <div>
+                                <p class="marca">AMD</p>
+                                <h2>Processador AMD Ryzen 5 7600, 5.1GHz Max Turbo, Cache 38MB, AM5, 6 Núcleos</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">1.398,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="selecao-placa-mae">
+                    <div class="produtos">
+                        <h3 id="texto-placa-mae">Placa Mãe</h3>
+                        <div class="produto">
+                            <input type="radio" name="placa-mae" id="amd-asrock">
+                            <img src="img/monte-seu-pc/placa-mae1.jpg" alt="amd-asrock">
+                            <div>
+                                <p class="marca">AMD</p>
+                                <h2>Placa Mãe ASRock B450M Steel Legend, AMD AM4, mATX, DDR4</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">1.097,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="radio" name="placa-mae" id="msi-a520m-pro">
+                            <img src="img/monte-seu-pc/placa-mae2.jpg" alt="msi-a520m-pro">
+                            <div>
+                                <p class="marca">MSI</p>
+                                <h2>Placa Mãe MSI A520M-A PRO, AMD AM4, mATX, DDR4</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">349,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="radio" name="placa-mae" id="gigabyte-b660m-pro">
+                            <img src="img/monte-seu-pc/placa-mae3.jpg" alt="gigabyte-b660m-pro">
+                            <div>
+                                <p class="marca">Gigabyte</p>
+                                <h2>Placa Mãe Gigabyte B660M Aorus PRO, Intel LGA 1700, mATX, DDR4, M.2 NVME</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">1.199,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="selecao-ram">
+                    <div class="produtos">
+                        <h3 id="texto-ram">Memória RAM</h3>
+                        <div class="produto">
+                            <input type="radio" name="ram" id="kingston-16gb">
+                            <img src="img/monte-seu-pc/ram1.jpg" alt="kingston-16gb">
+                            <div>
+                                <p class="marca">Kingston</p>
+                                <h2>Memória Kingston Fury Beast, 16GB, 3200MHz, DDR4</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">299,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="radio" name="ram" id="kingston-impact">
+                            <img src="img/monte-seu-pc/ram2.jpg" alt="kingston-impact">
+                            <div>
+                                <p class="marca">Kingston</p>
+                                <h2>Memória Kingston Fury Impact, 8GB, 3200MHz, DDR4, CL20, Para Notebook</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">139,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="radio" name="ram" id="kingston-8gb">
+                            <img src="img/monte-seu-pc/ram3.jpg" alt="kingston-8gb">
+                            <div>
+                                <p class="marca">Kingston</p>
+                                <h2>Memória Kingston Fury Beast RGB, 8GB, 3200MHz, DDR4</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">159,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="selecao-ssd">
+                    <div class="produtos">
+                        <h3 id="texto-ssd">SSD</h3>
+                        <div class="produto">
+                            <input type="radio" name="ssd" id="kingston-480gb">
+                            <img src="img/monte-seu-pc/ssd1.jpg" alt="kingston-480gb">
+                            <div>
+                                <p class="marca">Kingston</p>
+                                <h2>SSD 480 GB Kingston A400, SATA, Leitura: 500MB/s e Gravação: 450MB/s</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">200,00</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="radio" name="ssd" id="kingston-1tb">
+                            <img src="img/monte-seu-pc/ssd2.jpg" alt="kingston-1tb">
+                            <div>
+                                <p class="marca">Kingston</p>
+                                <h2>SSD 1 TB Kingston NV2, M.2 2280 PCIe, NVMe, Leitura: 3500 MB/s e Gravação: 2100 MB/s
+                                </h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">319,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="radio" name="ssd" id="husky-gaming-512gb">
+                            <img src="img/monte-seu-pc/ssd3.jpg" alt="husky-gaming-512gb">
+                            <div>
+                                <p class="marca">Husky Gaming</p>
+                                <h2>SSD 512 GB Husky Gaming, SATA III, Leitura: 520MB/s e Gravação: 450MB/s</h2>
+                            </div>
+                            <div class="preco-quantidade">
+                                <p class="preco">R$ <span class="valor">169,99</span></p>
+                                <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <section class="selecao-processador">
-                <div class="produtos">
-                    <h3 id="texto-processador">Processador</h3>
-                    <div class="produto">
-                        <input type="radio" name="processador" id="ryzen-7">
-                        <img src="img/monte-seu-pc/cpu1.jpg" alt="ryzen-7">
-                        <div>
-                            <p class="marca">AMD</p>
-                            <h2>AMD Ryzen 7 5700X, 3.4GHz (4.6GHz Max Turbo), Cache 36MB, AM4</h2>
+            <div class="div-direito">
+                <h2 class="titulo-selecionadas">Peças selecionadas</h2>
+                <div class="barra-progresso-circular-0-4">
+                    <div class="progresso-circular-0-4">
+                        <svg>
+                            <circle cx="70" cy="70" r="70" stroke-width="10"></circle>
+                            <circle cx="70" cy="70" r="70" stroke-width="10"></circle>
+                        </svg>
+                        <div class="numero">
+                            <h2>0</h2>
+                            <h2>/</h2>
+                            <h2>4</h2>
                         </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">1.097,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
+                        <h2 class="titulo-barra">Peças selecionadas</h2>
                     </div>
-
-                    <div class="produto">
-                        <input type="radio" name="processador" id="intel-i5">
-                        <img src="img/monte-seu-pc/cpu2.jpg" alt="intel-i5">
-                        <div>
-                            <p class="marca">Intel</p>
-                            <h2>Processador Intel Core i5-12400, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, LGA 1700
-                            </h2>
-                        </div>
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">1.098,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
-                    </div>
-
-                    <div class="produto">
-                        <input type="radio" name="processador" id="ryzen-5">
-                        <img src="img/monte-seu-pc/cpu3.jpg" alt="ryzen-5">
-                        <div>
-                            <p class="marca">AMD</p>
-                            <h2>Processador AMD Ryzen 5 7600, 5.1GHz Max Turbo, Cache 38MB, AM5, 6 Núcleos</h2>
-                        </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">1.398,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
-                    </div>
-
                 </div>
-            </section>
-
-            <section class="selecao-placa-mae">
-                <div class="produtos">
-                    <h3 id="texto-placa-mae">Placa Mãe</h3>
-                    <div class="produto">
-                        <input type="radio" name="placa-mae" id="amd-asrock">
-                        <img src="img/monte-seu-pc/placa-mae1.jpg" alt="amd-asrock">
+                <section class="pecas-selecionadas">
+                    <div class="processador-escolhido">
+                        <img src="">
                         <div>
-                            <p class="marca">AMD</p>
-                            <h2>Placa Mãe ASRock B450M Steel Legend, AMD AM4, mATX, DDR4</h2>
+                            <p class="marca"></p>
+                            <h2></h2>
                         </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">1.097,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
+                        <p></p>
+                        <p class="quantidade-selecionada"></p>
                     </div>
-
-                    <div class="produto">
-                        <input type="radio" name="placa-mae" id="msi-a520m-pro">
-                        <img src="img/monte-seu-pc/placa-mae2.jpg" alt="msi-a520m-pro">
+                    <div class="placa-mae-escolhida">
+                        <img src="">
                         <div>
-                            <p class="marca">MSI</p>
-                            <h2>Placa Mãe MSI A520M-A PRO, AMD AM4, mATX, DDR4</h2>
+                            <p class="marca"></p>
+                            <h2></h2>
                         </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">349,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
+                        <p></p>
+                        <p class="quantidade-selecionada"></p>
                     </div>
-
-                    <div class="produto">
-                        <input type="radio" name="placa-mae" id="gigabyte-b660m-pro">
-                        <img src="img/monte-seu-pc/placa-mae3.jpg" alt="gigabyte-b660m-pro">
+                    <div class="ram-escolhida">
+                        <img src="">
                         <div>
-                            <p class="marca">Gigabyte</p>
-                            <h2>Placa Mãe Gigabyte B660M Aorus PRO, Intel LGA 1700, mATX, DDR4, M.2 NVME</h2>
+                            <p class="marca"></p>
+                            <h2></h2>
                         </div>
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">1.199,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
+                        <p></p>
+                        <p class="quantidade-selecionada"></p>
                     </div>
-
-                </div>
-            </section>
-
-            <section class="selecao-ram">
-                <div class="produtos">
-                    <h3 id="texto-ram">Memória RAM</h3>
-                    <div class="produto">
-                        <input type="radio" name="ram" id="kingston-16gb">
-                        <img src="img/monte-seu-pc/ram1.jpg" alt="kingston-16gb">
+                    <div class="ssd-escolhido">
+                        <img src="">
                         <div>
-                            <p class="marca">Kingston</p>
-                            <h2>Memória Kingston Fury Beast, 16GB, 3200MHz, DDR4</h2>
+                            <p class="marca"></p>
+                            <h2></h2>
                         </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">299,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
+                        <p class="quantidade-selecionada"></p>
                     </div>
-
-                    <div class="produto">
-                        <input type="radio" name="ram" id="kingston-impact">
-                        <img src="img/monte-seu-pc/ram2.jpg" alt="kingston-impact">
-                        <div>
-                            <p class="marca">Kingston</p>
-                            <h2>Memória Kingston Fury Impact, 8GB, 3200MHz, DDR4, CL20, Para Notebook</h2>
-                        </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">139,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
-                    </div>
-
-                    <div class="produto">
-                        <input type="radio" name="ram" id="kingston-8gb">
-                        <img src="img/monte-seu-pc/ram3.jpg" alt="kingston-8gb">
-                        <div>
-                            <p class="marca">Kingston</p>
-                            <h2>Memória Kingston Fury Beast RGB, 8GB, 3200MHz, DDR4</h2>
-                        </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">159,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="selecao-ssd">
-                <div class="produtos">
-                    <h3 id="texto-ssd">SSD</h3>
-                    <div class="produto">
-                        <input type="radio" name="ssd" id="kingston-480gb">
-                        <img src="img/monte-seu-pc/ssd1.jpg" alt="kingston-480gb">
-                        <div>
-                            <p class="marca">Kingston</p>
-                            <h2>SSD 480 GB Kingston A400, SATA, Leitura: 500MB/s e Gravação: 450MB/s</h2>
-                        </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">200,00</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
-
-                    </div>
-
-                    <div class="produto">
-                        <input type="radio" name="ssd" id="kingston-1tb">
-                        <img src="img/monte-seu-pc/ssd2.jpg" alt="kingston-1tb">
-                        <div>
-                            <p class="marca">Kingston</p>
-                            <h2>SSD 1 TB Kingston NV2, M.2 2280 PCIe, NVMe, Leitura: 3500 MB/s e Gravação: 2100 MB/s
-                            </h2>
-                        </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">319,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
-
-                    </div>
-
-                    <div class="produto">
-                        <input type="radio" name="ssd" id="husky-gaming-512gb">
-                        <img src="img/monte-seu-pc/ssd3.jpg" alt="husky-gaming-512gb">
-                        <div>
-                            <p class="marca">Husky Gaming</p>
-                            <h2>SSD 512 GB Husky Gaming, SATA III, Leitura: 520MB/s e Gravação: 450MB/s</h2>
-                        </div>
-
-                        <div class="preco-quantidade">
-                            <p class="preco">R$ <span class="valor">169,99</span></p>
-                            <input type="number" name="quantidade" id="quantidade" min="1" max="10" value=1>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-        </div>
-
-        <div class="div-direito">
-
-            <h2 class="titulo-selecionadas">Peças selecionadas</h2>
-
-            <div class="barra-progresso-circular-0-4">
-                <div class="progresso-circular-0-4">
-                    <svg>
-                        <circle cx="70" cy="70" r="70" stroke-width="10"></circle>
-                        <circle cx="70" cy="70" r="70" stroke-width="10"></circle>
-                    </svg>
-                    <div class="numero">
-                        <h2>0</h2>
-                        <h2>/</h2>
-                        <h2>4</h2>
-                    </div>
-                    <h2 class="titulo-barra">Peças selecionadas</h2>
-                </div>
+                </section>
             </div>
-            <section class="pecas-selecionadas">
-                <div class="processador-escolhido">
-                    <img src="">
-                    <div>
-                        <p class="marca"></p>
-                        <h2></h2>
-                    </div>
-                    <p></p>
-                    <p class="quantidade-selecionada"></p>
-                </div>
-
-                <div class="placa-mae-escolhida">
-                    <img src="">
-                    <div>
-                        <p class="marca"></p>
-                        <h2></h2>
-                    </div>
-                    <p></p>
-                    <p class="quantidade-selecionada"></p>
-                </div>
-
-                <div class="ram-escolhida">
-                    <img src="">
-                    <div>
-                        <p class="marca"></p>
-                        <h2></h2>
-                    </div>
-                    <p></p>
-                    <p class="quantidade-selecionada"></p>
-                </div>
-
-                <div class="ssd-escolhido">
-                    <img src="">
-                    <div>
-                        <p class="marca"></p>
-                        <h2></h2>
-                    </div>
-                    <p class="quantidade-selecionada"></p>
-                </div>
-            </section>
-        </div>
+        </section>
     </main>
 
     <!-- rodapé -->
@@ -349,7 +315,7 @@
             <h2>VALOR TOTAL</h2>
             <hr>
             <p id="valor-total">R$ 0,00</p>
-            <button class="botao-comprar">FINZALIZAR COMPRA</button>
+            <button class="botao-comprar">FINALIZAR COMPRA</button>
         </div>
     </footer>
 </body>

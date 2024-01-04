@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script>
+       function verificaConta() {
+
+                let cpf_or_cnpj = document.getElementById('cpf')
+                console.log(cpf_or_cnpj)
+                let juridica = document.getElementById('pessoa-juridica');
+
+                if (juridica.checked) {
+                    cpf_or_cnpj.placeholder = "CNPJ*"
+                }
+                else {
+                    cpf_or_cnpj.placeholder = "CPF*"
+                }
+            }
+    </script>
+
 </head>
 
 <body>
@@ -41,45 +58,55 @@
 
                 <h2>CRIAR CONTA</h2>
 
+                <div class="redes-sociais-cadastro">
+                    <a href="https://www.facebook.com/" target="_blank"><button class="botao-facebook-cadastro"><img
+                                src="img/icones/facebook.png" alt="logo-facebook">Cadastrar com o
+                            <b>Facebook</b></button></a>
+                    <a href="https://accounts.google.com/"><button class="botao-google-cadastro"><img
+                                src="img/icones/search.png" alt="logo-google">Cadastrar com o
+                            <b>Google</b></button></a>
+                    <a href="https://appleid.apple.com/"><button class="botao-apple-cadastro"><img
+                                src="img/icones/apple-logo.png" alt="logo-apple">Cadastrar com a
+                            <b>Apple</b></button></a>
+                </div>
                 <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
 
                     <p class="texto-tipo-conta">Tipo de conta</p>
 
-                    
+
                     <div class="input-tipo-conta">
 
-                    <input type="radio" class="input-radio" name="fisica_or_juridica" id="pessoa-fisica">
-                    <label for="pessoa-fisica">Pessoa física</label>
-                    
-                    <input type="radio" class="input-radio" name="fisica_or_juridica" id="pessoa-juridica"> 
-                    <label for="pessoa-juridica">Pessoa jurídica</label>
-                    
+                        <input type="radio" class="input-radio" name="fisica_or_juridica" id="pessoa-fisica"
+                            onchange="verificaConta()">
+                        <label for="pessoa-fisica">Pessoa física</label>
 
-                    </div>
-                    
-    
-                    <div class="redes-sociais-cadastro">
-                            <a href="https://www.facebook.com/" target="_blank"><button class="botao-facebook-cadastro"><img src="img/icones/facebook.png" alt="logo-facebook">Cadastrar com o <b>Facebook</b></button></a>
-                            <a href="https://accounts.google.com/"><button class="botao-google-cadastro"><img src="img/icones/search.png" alt="logo-google">Cadastrar com o <b>Google</b></button></a>
-                            <a href="https://appleid.apple.com/"><button class="botao-apple-cadastro"><img src="img/icones/apple-logo.png" alt="logo-apple">Cadastrar com a <b>Apple</b></button></a>
+                        <input type="radio" class="input-radio" name="fisica_or_juridica" id="pessoa-juridica"
+                            onchange="verificaConta()">
+                        <label for="pessoa-juridica">Pessoa jurídica</label>
+
+
                     </div>
 
                     <div class="ou">
-                       <hr><span>ou</span><hr> 
+                        <hr><span>ou</span>
+                        <hr>
                     </div>
-                    
+
                     <div class="textos">
 
                         <div class="nome-cpf">
-                            <input type="text" name="nome-completo" id="nome-completo" placeholder="Nome Completo*" required>
+                            <input type="text" name="nome-completo" id="nome-completo" placeholder="Nome Completo*"
+                                required>
                             <input type="text" name="cpf" id="cpf" placeholder="CPF*" required>
                         </div>
-    
+
                         <div class="data-telefone">
-                            <input type="date" name="data-nascimento" id="data-nascimento" placeholder="Data de nascimento*" required>
-                            <input type="tel" name="telefone-celular" id="telefone-celular" placeholder="Telefone celular*" required>
+                            <input type="date" name="data-nascimento" id="data-nascimento"
+                                placeholder="Data de nascimento*" required>
+                            <input type="tel" name="telefone-celular" id="telefone-celular"
+                                placeholder="Telefone celular*" required>
                         </div>
-    
+
 
                         <div class="e-mail">
                             <input type="email" name="e-mail" id="e-mail" placeholder="E-mail*" required>
@@ -87,7 +114,8 @@
 
                         <div class="senha">
                             <input type="password" name="senha" id="senha" placeholder="Crie sua senha*" required>
-                            <input type="password" name="senha-confirmada" id="senha-confirmada" placeholder="Confirme sua senha*" required>
+                            <input type="password" name="senha-confirmada" id="senha-confirmada"
+                                placeholder="Confirme sua senha*" required>
                         </div>
 
                         <div class="onde-conheceu">
@@ -100,11 +128,11 @@
                                 <option value="outro">Outro</option>
                             </select>
                         </div>
-                    <p class="texto-obrigatorio">(*) Campos obrigatórios</p>
+                        <p class="texto-obrigatorio">(*) Campos obrigatórios</p>
                     </div>
-                    
+
                     <div class="checkbox-receber-info">
-                        <input type="checkbox" name="receber-informacoes" id="receber-informacoes"> 
+                        <input type="checkbox" name="receber-informacoes" id="receber-informacoes">
                         <p>Quero receber ofertas e novidades por e-mail, SMS, WhatsApp ou mensagens nos App's DLtech</p>
                     </div>
 
@@ -112,7 +140,7 @@
                         <input type="checkbox" name="esta-acordo" id="esta-acordo" required>
                         <p>Li e estou de acordo com as políticas da empresa e políticas de privacidade.*</p>
                     </div>
-                    
+
 
                     <button type="submit">CADASTRAR</button>
                 </form>
@@ -123,16 +151,16 @@
 
                 <h2>FAZER LOGIN</h2>
 
-               
-                    <form action="" method="POST" class="inputs-login">
-                        <input type="text" name="usuario" id="usuario" placeholder="E-mail, CPF ou CNPJ" required>
-                        <input type="password" name="senha-login" id="senha-login" placeholder="Senha" required>
 
-                        <button type="submit"><span class="material-symbols-outlined">
+                <form action="" method="POST" class="inputs-login">
+                    <input type="text" name="usuario" id="usuario" placeholder="E-mail, CPF ou CNPJ" required>
+                    <input type="password" name="senha-login" id="senha-login" placeholder="Senha" required>
+
+                    <button type="submit"><span class="material-symbols-outlined">
                             login
-                            </span>ENTRAR</button>
-                    </form>
-    
+                        </span>ENTRAR</button>
+                </form>
+
                 <a href="#">Esqueceu a senha?</a>
 
                 <hr>
@@ -140,8 +168,10 @@
                 <p>Quero acessar com minhas redes sociais</p>
 
                 <div class="redes-sociais-login">
-                    <a href="https://www.facebook.com/" target="_blank"><button class="botao-facebook-login"><img src="img/icones/facebook.png" alt="logo-facebook">Facebook</button></a>
-                    <a href="https://accounts.google.com/" target="_blank"><button class="botao-google-login"><img src="img/icones/search.png" alt="logo-google">Google</button></a>
+                    <a href="https://www.facebook.com/" target="_blank"><button class="botao-facebook-login"><img
+                                src="img/icones/facebook.png" alt="logo-facebook">Facebook</button></a>
+                    <a href="https://accounts.google.com/" target="_blank"><button class="botao-google-login"><img
+                                src="img/icones/search.png" alt="logo-google">Google</button></a>
                 </div>
             </div>
         </div>
@@ -162,7 +192,8 @@
             <h3>Mídias sociais</h3>
             <a href="#"><img src="img/icones/instagram.png" alt="logo instagram"></a>
             <a href="#"><img src="img/icones/youtube.png" alt="logo youtube"></a>
-            <a href="https://github.com/lucas-limabr/dltech" target="_blank"><img src="img/icones/github.png" alt="logo github"></a>
+            <a href="https://github.com/lucas-limabr/dltech" target="_blank"><img src="img/icones/github.png"
+                    alt="logo github"></a>
         </div>
         <hr>
         <!-- atendimento -->
@@ -170,13 +201,13 @@
             <h3>Atendimento</h3>
             <div>
                 <p><span class="material-symbols-outlined">
-                    call
+                        call
                     </span> (32)98756-4554</p>
                 <p><span class="material-symbols-outlined">
-                    mail
+                        mail
                     </span>faleconosco@dltech.com</p>
                 <p><span class="material-symbols-outlined">
-                    location_on
+                        location_on
                     </span>Juiz de Fora, MG</p>
                 <a href="https://encurtador.com.br/coMN0" target="_blank">
                     <p>Rua Bernardo Mascarenhas, 1283</p>

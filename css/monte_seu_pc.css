@@ -88,11 +88,14 @@ input+span {
     color: var(--cor_rich_black);
 }
 
-main {
-    width: 80%;
+main{
+    width: 90%;
     margin: auto;
+}
+
+section#principal{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 55% 45%;
 }
 
 main h3 {
@@ -125,23 +128,17 @@ button:hover {
     background-color: #ff9d60;
 }
 
-.div-esquerdo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
 .div-botoes {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 2vh;
     text-align: center;
     gap: 10px;
 }
 
 .div-botoes button {
-    width: 20vh;
+    width: 150px;
     background-color: var(--cor_pumpkin);
     border: none;
     padding: 20px;
@@ -160,8 +157,10 @@ button:hover {
 .titulo-monte-pc {
     font-size: 30px;
     color: var(--cor_orange);
-    margin-top: 4vh;
-    text-align: center;
+    margin: 45px 0px;
+    text-align: left;
+    padding-left: 30px;
+    background-image: linear-gradient(to right, #e6ddd8, var(--cor_pumpkin));
 }
 
 
@@ -186,6 +185,7 @@ button:hover {
     margin-right: 10px;
     padding: 10px;
     border: 2px solid var(--cor_orange);
+    margin-bottom: 16px;
 }
 
 .produto div {
@@ -268,7 +268,6 @@ button:hover {
 }
 
 .div-direito {
-    padding: 20px;
     margin-left: 5vh;
 }
 
@@ -303,11 +302,10 @@ button:hover {
 }
 
 .titulo-selecionadas {
-    font-size: 30px;
+    font-size: 25px;
     color: var(--cor_orange);
     margin-top: 2vh;
     text-align: center;
-    margin-left: 5vh;
 }
 
 .barra-progresso-circular-0-4 {
@@ -408,10 +406,10 @@ button:hover {
 }
 
 .botao-comprar {
-    width: 20vh;
+    width: fit-content;
     background-color: var(--cor_pumpkin);
     border: none;
-    padding: 10px 10px;
+    padding: 12px;
     color: white;
     font-weight: bold;
     font-size: 14px;

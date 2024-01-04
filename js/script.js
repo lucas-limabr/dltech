@@ -154,7 +154,7 @@ document.querySelectorAll('button').forEach(button => {
     })
 });
 
-function alteraTamnho() {
+function alteraTamanho() {
     let menu = document.getElementById('menu')
 
     if (window.innerWidth >= 768) {
