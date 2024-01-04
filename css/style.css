@@ -37,14 +37,12 @@ header>nav {
 #menu_hamburguer{
     display: none;
     background-color: rgb(35, 35, 35);
-    width: 100vw;
     color: white;
     text-align: center;
     padding: 6px 0px;
 }
 
 menu {
-    display: block;
     padding: 12px 0px 12px 25px;
 }
 
@@ -81,12 +79,15 @@ menu>a:hover {
     transition: 350ms;
 }
 
+#pesquisa{
+    float: right;
+    margin-right: 60px;    
+}
+
 input#search-bar {
     width: 180px;
     border-radius: 15px;
-    float: right;
     height: 27px;
-    margin-right: 5%;
     border: none;
     padding-left: 7px;
 }
@@ -94,7 +95,6 @@ input#search-bar {
 input+span {
     position: absolute;
     right: 5.5%;
-    color: var(--cor_rich_black);
 }
 
 /* fim do cabeçalho */

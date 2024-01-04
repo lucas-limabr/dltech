@@ -20,14 +20,22 @@
     }
 
     input#search-bar {
-        width: 30%;
-        border-radius: 15px;
-        float: right;
-        height: 27px;
+        padding-left: 12px;
+        margin: 9px 0px;
+    }
+
+    #pesquisa{
+        background-color: var(--cor_orange);
+        width: 100%;
         text-align: center;
-        border: 1px solid black;
-        padding-left: 7px;
-        margin-top: 1px;
+        position: relative;
+        float: none;
+    }
+
+    input+span {
+        position: absolute;
+        right: 33%;
+        top: 21%;
     }
 
     section{

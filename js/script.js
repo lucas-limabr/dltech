@@ -122,6 +122,7 @@ function pesquisar() {
 // CARRINHO
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', function () {
+        alert('Produto adicionado ao carrinho!')
         //pega informações do produto
         const productName = this.parentNode.querySelector('.title-produto').innerHTML
         const productImage = this.parentNode.querySelector('img').src
@@ -150,7 +151,7 @@ document.querySelectorAll('button').forEach(button => {
         localStorage.setItem('cart', JSON.stringify(cart));
 
         // Redireciona para a página do carrinho
-        window.location.href = 'carrinho.html';
+        // window.location.href = 'carrinho.html';
     })
 });
 
