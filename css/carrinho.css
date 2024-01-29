@@ -190,6 +190,16 @@ img {
     font-weight: bold;
 }
 
+#clear_cart{
+    padding: 7px;
+    background-color: crimson;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    margin-left: 50px;
+    font-weight: 500;
+}
+
 /* fim */
 
 /* início do rodapé */

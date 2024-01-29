@@ -5,6 +5,12 @@ const cartItemsdiv = document.getElementById('cart-items')
 var valor_tot = 0
 let valorNumerico = 0
 
+document.getElementById('clear_cart').addEventListener('click', function(){
+    localStorage.removeItem('cart')
+    
+    location.reload()
+})
+
 // Verifica se há itens no carrinho
 if (cart && cart.length > 0) {
 
