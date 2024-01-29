@@ -120,38 +120,47 @@ function pesquisar() {
 }
 
 // CARRINHO
+// forEach só aceita iterar sobre um array comum ou uma NodeList (lista de nós), como é o caso, gerada pelo queryselectorAll
 document.querySelectorAll('button').forEach(button => {
+    // função anônima é a correta para acessar o this, que é o button de cada iteração
+    //a cada clique, já executa a função
     button.addEventListener('click', function () {
-        alert('Produto adicionado ao carrinho!')
+        //restringe a busca pelo seletor ao pesquisar apenas dentro da "div-hover" que é pai de this (button)
         //pega informações do produto
         const productName = this.parentNode.querySelector('.title-produto').innerHTML
         const productImage = this.parentNode.querySelector('img').src
         const productPrice = this.parentNode.querySelector('.preco-desconto').innerHTML
 
+        console.log(productPrice)
+
         // Cria um objeto com os detalhes do produto
         const product = {
             name: productName,
             image: productImage,
-            price: productPrice
+            price: productPrice,
         };
 
         // Verifica se já existe um carrinho no localStorage
         let cart = localStorage.getItem('cart')
 
+        //se for nulo, cria um novo array
         if (!cart) {
             cart = []
         }
         else {
-            // Se existir, converte o JSON para um array
+            // Se existir, converte o JSON para um array, para em seguida, usar um método de array
             cart = JSON.parse(cart)
         }
 
         cart.push(product)
 
+        // atualizando o localstorage, passando o nome da chave e o seu respectivo valor
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        // Redireciona para a página do carrinho
-        // window.location.href = 'carrinho.html';
+        let redirecionar = confirm('Produto adicionado com sucesso! Deseja ir para o carrinho?')
+        if (redirecionar) {
+            window.location.href = 'carrinho.html'
+        }
     })
 });
 
@@ -170,7 +179,7 @@ function clicarMenu() {
     if (menu.style.display == 'none') {
         menu.style.display = 'block';
     }
-    else{
+    else {
         menu.style.display = 'none';
     }
 }

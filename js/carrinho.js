@@ -1,12 +1,21 @@
 // Obtém o carrinho do localStorage
 const cart = JSON.parse(localStorage.getItem('cart'))
 
+const cartItemsdiv = document.getElementById('cart-items')
+var valor_tot = 0
+let valorNumerico = 0
+
 // Verifica se há itens no carrinho
 if (cart && cart.length > 0) {
-    const cartItemsdiv = document.getElementById('cart-items')
+
+    //console.log(cart)
 
     // Itera sobre os produtos no carrinho e os exibe na página
     cart.forEach(product => {
+
+        valorNumerico = Number(product.price.replace(/[^\d,]/g, '').replace(',', '.'));
+        valor_tot += valorNumerico
+
         const productDiv = document.createElement('div')
         productDiv.setAttribute('class', 'box_produto')
 
@@ -49,11 +58,35 @@ if (cart && cart.length > 0) {
         cartItemsdiv.appendChild(productDiv)
 
     });
+
+    exibeValor()
+    
+    var qtd_produto = document.getElementsByClassName('qtd_produto')
+    let qtd_por_produto = 0
+    // o método forEach não aceita iterar sobre um objeto do tipo HTML Collection, que é gerado pelo getElementsByClassName, tendo várias classes 'qtd_produto', assim, precisa ser convertido para um array
+    Array.from(qtd_produto).forEach(qtd_produto => {
+        qtd_produto.addEventListener('input', function () {
+            valor_tot = 0
+            cart.forEach(function (product, index) {
+                qtd_por_produto = document.getElementsByClassName('qtd_produto')[index].value
+                valorNumerico = Number(product.price.replace(/[^\d,]/g, '').replace(',', '.'));
+                valor_tot += qtd_por_produto * valorNumerico
+            })
+            exibeValor()
+        })
+    })
+
+    function exibeValor() {
+        let output_valor_tot = document.getElementById('valor_tot')
+        valor_tot = valor_tot.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+        output_valor_tot.innerText = valor_tot
+    }
+
 } else {
     // Se o carrinho estiver vazio, exibe uma mensagem
-    const cartItemsdiv = document.getElementById('cart-items')
     cartItemsdiv.textContent = "Seu carrinho está vazio!"
 }
+
 
 // FUNÇÃO FORMATA CEP
 let conta_digitos = 0
@@ -103,4 +136,3 @@ function buscarCEP() {
             });
     }
 }
-
