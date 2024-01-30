@@ -167,12 +167,24 @@ document.querySelectorAll('button, .comprar').forEach(button => {
 
 function alteraTamanho() {
     let menu = document.getElementById('menu')
+    var barra_pesquisa = document.getElementById('search-bar')
+    var oninput = false
 
     if (window.innerWidth >= 768) {
         menu.style.display = "block"
     }
     else {
-        menu.style.display = "none"
+        barra_pesquisa.addEventListener('focus', () => {
+            oninput = true
+            menu.style.display = "block"
+        })
+
+        if(oninput){
+            menu.style.display = "block"
+        }
+        else{
+            menu.style.display = "none"
+        }
     }
 }
 

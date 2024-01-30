@@ -17,10 +17,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body,
+/* como eu utilizei position sticky em um FILHO do body, eu não posso determinar altura para o body, pois isso afeta o comportamento sticky de seu filho */
+/* body,
 html {
     height: 100vh;
-}
+   
+} */
 
 /* início do cabeçalho */
 header {
@@ -43,7 +45,7 @@ main {
     width: 70%;
     background-color: #f1f1f1;
     float: left;
-    margin-top: 40px;
+    margin: 40px 0px;
 }
 
 h2 {
@@ -122,15 +124,14 @@ label {
     text-align: center;
 }
 
-aside {
+aside { 
     font-size: 7px;
     float: right;
     background-color: #f1f1f1;
     width: 28%;
     margin-top: 40px;
-    position: fixed;
-    top: 99px;
-    left: 71%;
+    position: sticky;
+    top: 10px;
 }
 
 aside h2 {
