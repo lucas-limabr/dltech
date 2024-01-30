@@ -121,15 +121,16 @@ function pesquisar() {
 
 // CARRINHO
 // forEach só aceita iterar sobre um array comum ou uma NodeList (lista de nós), como é o caso, gerada pelo queryselectorAll
-document.querySelectorAll('button').forEach(button => {
+// para selecionar mais de um seletor no querySelector, eu deixo eles dentro de '' e separados por vírgula
+document.querySelectorAll('button, .comprar').forEach(button => {
     // função anônima é a correta para acessar o this, que é o button de cada iteração
     //a cada clique, já executa a função
     button.addEventListener('click', function () {
         //restringe a busca pelo seletor ao pesquisar apenas dentro da "div-hover" que é pai de this (button)
         //pega informações do produto
-        const productName = this.parentNode.querySelector('.title-produto').innerHTML
-        const productImage = this.parentNode.querySelector('img').src
-        const productPrice = this.parentNode.querySelector('.preco-desconto').innerHTML
+        const productName = this.offsetParent.querySelector('.title-produto').innerHTML
+        const productImage = this.offsetParent.querySelector('img').src
+        const productPrice = this.offsetParent.querySelector('.preco-desconto').innerHTML
 
         console.log(productPrice)
 

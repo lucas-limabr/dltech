@@ -16,7 +16,7 @@ if (cart && cart.length > 0) {
 
     //console.log(cart)
 
-    // Itera sobre os produtos no carrinho e os exibe na página
+    // Itera sobre os produtos no carrinho e os exibe na página, em seguida, uso de arrow function
     cart.forEach(product => {
 
         valorNumerico = Number(product.price.replace(/[^\d,]/g, '').replace(',', '.'));

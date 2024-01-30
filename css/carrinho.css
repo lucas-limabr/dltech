@@ -114,15 +114,15 @@ label {
 #cart-items {
     padding-left: 50px;
     margin: 50px 0px;
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
 }
 
-.qtd_produto{
+.qtd_produto {
     width: 45px;
     text-align: center;
 }
 
-aside{
+aside {
     font-size: 7px;
     float: right;
     background-color: #f1f1f1;
@@ -133,13 +133,13 @@ aside{
     left: 71%;
 }
 
-aside h2{
+aside h2 {
     font-size: 22px;
     color: var(--cor_rich_black);
     padding: 15px;
 }
 
-aside h3{
+aside h3 {
     padding-left: 15px;
     padding-bottom: 4px;
     font-size: 15px;
@@ -147,7 +147,7 @@ aside h3{
     font-weight: 500;
 }
 
-aside button{
+aside button {
     background-color: var(--cor_orange);
     color: white;
     font-weight: bold;
@@ -157,7 +157,8 @@ aside button{
     padding: 6px;
     margin-left: 30%;
     margin-bottom: 15px;
-   margin-top: 15px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 /* aplicando estilo as tag que foram criadas no javascript */
@@ -184,13 +185,13 @@ img {
     color: var(--cor_outer_space);
 }
 
-.preco_produto{
+.preco_produto {
     font-size: 20px;
     color: var(--cor_orange);
     font-weight: bold;
 }
 
-#clear_cart{
+#clear_cart {
     padding: 7px;
     background-color: crimson;
     border-radius: 20px;
