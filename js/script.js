@@ -177,6 +177,10 @@ function alteraTamanho(event) {
         }
 }
 
+function manterMenu() {
+    document.getElementById('menu').display = "block" 
+}
+
 function clicarMenu() {
     if (menu.style.display == 'none') {
         menu.style.display = 'block';
