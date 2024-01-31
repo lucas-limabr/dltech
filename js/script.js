@@ -165,26 +165,6 @@ document.querySelectorAll('button, .comprar').forEach(button => {
     })
 });
 
-// esta variável recebe o valor da largura atual da página quando ela é carregada
-var largura_inicial = window.innerWidth
-console.log(window.innerWidth)
-
-function alteraTamanho() {
-    let menu = document.getElementById('menu')
-  
-    if (Math.abs(window.innerWidth - largura_inicial) > 50) {
-        if (window.innerWidth >= 768) {
-            menu.style.display = "block"
-        }
-        else {
-            menu.style.display = "none"
-        }
-    }
-    else{
-        menu.style.display = "block"
-    }
-}
-
 function clicarMenu() {
     if (menu.style.display == 'none') {
         menu.style.display = 'block';
@@ -193,3 +173,20 @@ function clicarMenu() {
         menu.style.display = 'none';
     }
 }
+
+// esta variável recebe o valor da largura atual da página quando ela é carregada
+var largura_inicial = window.innerWidth
+
+window.addEventListener('resize', () => {
+    let menu = document.getElementById('menu')
+
+    // apenas se a mudança de largura da tela for significativa (deduzi mais do que 30 px), é um evento real de redimensionamento de tela, portanto execute. Isso corrige o bug de clicar no input de pesquisa, que gerava um redimensionamento mínimo da janela do navegador em disp. mobiles
+    if (Math.abs(window.innerWidth - largura_inicial) > 40) {
+        if (window.innerWidth >= 768) {
+            menu.style.display = "block"
+        }
+        else {
+            menu.style.display = "none"
+        }
+    }
+})
