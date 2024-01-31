@@ -267,7 +267,6 @@ section#secao-marcas  {
 
 /* início do rodapé */
 footer{
-    /* height: 280px; */
     background-color: var(--cor_rich_black);
     display: flex;
     justify-content: space-evenly;

@@ -1,0 +1,57 @@
+@media screen and (max-width: 768px) {
+    main {
+        float: none;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 0.1px;
+        margin-bottom: 25px;
+    }
+
+    aside {
+        float: none;
+    }
+
+    .box_produto {
+        width: 100%;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    #cart-items {
+        padding: 0px 10px;
+    }
+
+    #clear_cart {
+        margin-left: 10px;
+    }
+
+    aside {
+        position: static;
+        width: 90%;
+        margin: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        align-content: center;
+        padding: 0px;
+    }
+
+    footer h3 {
+        margin: 0px;
+    }
+
+    footer div {
+        padding: 22px 0px;
+    }
+
+    #atendimento {
+        text-align: center;
+    }
+
+    #sociais {
+        text-align: center;
+    }
+}
