@@ -165,27 +165,16 @@ document.querySelectorAll('button, .comprar').forEach(button => {
     })
 });
 
-function alteraTamanho() {
+function alteraTamanho(event) {
     let menu = document.getElementById('menu')
-    var barra_pesquisa = document.getElementById('search-bar')
-    var oninput = false
 
-    if (window.innerWidth >= 768) {
-        menu.style.display = "block"
-    }
-    else {
-        barra_pesquisa.addEventListener('focus', () => {
-            oninput = true
-            menu.style.display = "block"
-        })
-
-        if(oninput){
+    if (event.target.id !== "search-bar") {
+        if (window.innerWidth >= 768) {
             menu.style.display = "block"
         }
-        else{
+        else
             menu.style.display = "none"
         }
-    }
 }
 
 function clicarMenu() {
