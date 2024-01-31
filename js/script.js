@@ -165,20 +165,24 @@ document.querySelectorAll('button, .comprar').forEach(button => {
     })
 });
 
-function alteraTamanho(event) {
-    let menu = document.getElementById('menu')
+// esta variável recebe o valor da largura atual da página quando ela é carregada
+var largura_inicial = window.innerWidth
+console.log(window.innerWidth)
 
-    if (event.target.id !== "search-bar") {
+function alteraTamanho() {
+    let menu = document.getElementById('menu')
+  
+    if (Math.abs(window.innerWidth - largura_inicial) > 50) {
         if (window.innerWidth >= 768) {
             menu.style.display = "block"
         }
-        else
+        else {
             menu.style.display = "none"
         }
-}
-
-function manterMenu() {
-    document.getElementById('menu').display = "block" 
+    }
+    else{
+        menu.style.display = "block"
+    }
 }
 
 function clicarMenu() {
