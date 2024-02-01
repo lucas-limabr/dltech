@@ -29,21 +29,28 @@ header>h1 {
     text-align: center;
 }
 
-h1 > a{
-    color: white;
-}
-
 header>nav {
     background-color: var(--cor_orange);
+}
+
+#menu_hamburguer{
+    display: none;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    text-align: center;
+    padding: 6px 0px;
 }
 
 menu {
     padding: 12px 0px 12px 25px;
 }
 
+a{
+    text-decoration: none;
+}
+
 menu>a {
     color: white;
-    text-decoration: none;
     font-weight: bold;
     padding: 0px 15px;
 }
@@ -57,26 +64,18 @@ a~span {
     color: white;
 }
 
+a > .material-symbols-outlined, .icons-hover > .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
 menu>a:hover {
     background-color: #ef833c;
     padding: 10px;
     transition: 350ms;
-}
-
-input#search-bar {
-    width: 180px;
-    border-radius: 15px;
-    float: right;
-    height: 27px;
-    margin-right: 5%;
-    border: none;
-    padding-left: 7px;
-}
-
-input+span {
-    position: absolute;
-    right: 5.5%;
-    color: var(--cor_rich_black);
 }
 
 input::placeholder{
@@ -100,6 +99,10 @@ input[type="date"], input[type="tel"]{
     border: solid 1px #7F858D;
     border-radius: 5px;
     width: 49.6%;
+}
+
+input#data-nascimento{
+   color: var(--cor_gray);
 }
 
 h2 {
@@ -193,11 +196,7 @@ button[type="submit"]:hover{
 .texto-tipo-conta{
     color: gray;
     display: flex;
-}
-
-.input-tipo-conta{
-    display: flex;
-    
+    margin-top: 50px;
 }
 
 #pessoa-fisica {
@@ -284,7 +283,6 @@ button[type="submit"]:hover{
 .texto-obrigatorio{
     padding-top: 5px;
     padding-bottom: 30px;
-    display: flex;
     font-size: 12px;
 }
 
@@ -388,7 +386,6 @@ a{
 
 /* início do rodapé */
 footer{
-    /* height: 280px; */
     background-color: var(--cor_rich_black);
     display: flex;
     justify-content: space-evenly;
@@ -434,4 +431,12 @@ p > span.material-symbols-outlined{
 
 footer p{
     font-size: 14.5px;
+}
+
+#copy{
+    background-color: var(--cor_rich_black);
+    padding: 12px; 
+    color: rgb(218, 214, 214);
+    border-top: 1px solid rgb(242, 232, 213);
+    text-align: center;
 }
