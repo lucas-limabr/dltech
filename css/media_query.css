@@ -12,8 +12,12 @@
     }
 
     menu {
-        display: none;
         padding: 0px;
+    }
+
+    /* na execução deste CSS, este seletor pode existir ou não, depende da função de load no js, se não existir, tudo bem, nada será feito */
+    menu.menu-hidden{
+        display: none;
     }
 
     menu>span {

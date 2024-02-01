@@ -177,6 +177,19 @@ function clicarMenu() {
 // esta variável recebe o valor da largura atual da página quando ela é carregada
 var largura_inicial = window.innerWidth
 
+// no carregamento inicial ou refreshs esta arrow function será executada, para ver o tamanho de largura que a página abriu, se for menor que 768px, adicione uma classe junto ao id menu, dentro da tag menu, esta classe é um seletor no mediaquery.css, definindo display none pra ela
+//Tal função garante que se a página for aberta em disp. mobile, o menu estará ocultado
+window.addEventListener('load', ()=>{
+   var menu = document.getElementById('menu')
+
+   if(window.innerWidth < 768){
+        menu.classList.add('menu-hidden')
+   }
+   else{
+    menu.classList.remove('menu-hidden')
+   }
+})
+
 window.addEventListener('resize', () => {
     let menu = document.getElementById('menu')
 
