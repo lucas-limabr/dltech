@@ -202,6 +202,14 @@ img {
     font-weight: 500;
 }
 
+.btn_delete{
+    width: 20px;
+    margin-left: 12px;
+    position: relative;
+    top: 2%;
+    cursor: pointer;
+}
+
 /* fim */
 
 /* início do rodapé */

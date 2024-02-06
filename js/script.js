@@ -22,6 +22,14 @@ function divHover() {
     }
 }
 
+// Verifica se a página foi recarregada
+if (sessionStorage.getItem('reloaded')) {
+    document.getElementById('cookie_bar').style.display = "none"
+}
+
+// Define o indicador de recarregamento
+sessionStorage.setItem('reloaded', 'true');
+
 function exibiricone(j) {
     //console.log(j)
     span[j].style.visibility = "visible"
@@ -34,7 +42,7 @@ function ocultarIcone(j) {
     span[j].style.visibility = "hidden"
 }
 
-document.getElementById('aceitar_cookie').addEventListener('click', ()=>{
+document.getElementById('aceitar_cookie').addEventListener('click', () => {
     document.getElementById('cookie_bar').style.display = "none"
 })
 
@@ -136,8 +144,6 @@ document.querySelectorAll('button, .comprar').forEach(button => {
         const productImage = this.offsetParent.querySelector('img').src
         const productPrice = this.offsetParent.querySelector('.preco-desconto').innerHTML
 
-        console.log(productPrice)
-
         // Cria um objeto com os detalhes do produto
         const product = {
             name: productName,
@@ -157,14 +163,23 @@ document.querySelectorAll('button, .comprar').forEach(button => {
             cart = JSON.parse(cart)
         }
 
-        cart.push(product)
+        //método de array some, que tem como argumento uma função callback, que irá varrer o array cart, cada elemento foi definido como item e é feito uma comparação com uma constante (no caso, um objeto). Se pelo menos um item.name for igual a product.name, ou seja, basta um true para que este método retorne true para a variável produto_existente
+        var produto_existente = cart.some(item => item.name === product.name)
 
-        // atualizando o localstorage, passando o nome da chave e o seu respectivo valor
-        localStorage.setItem('cart', JSON.stringify(cart));
+        //validação se o produto que está sendo add já consta no localStorage
+        if (!produto_existente) {
+            cart.push(product)
 
-        let redirecionar = confirm('Produto adicionado com sucesso! Deseja ir para o carrinho?')
-        if (redirecionar) {
-            window.location.href = 'carrinho.html'
+            // atualizando o localstorage, passando o nome da chave e o seu respectivo valor
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            let redirecionar = confirm('Produto adicionado com sucesso! Deseja ir para o carrinho?')
+            if (redirecionar) {
+                window.location.href = 'carrinho.html'
+            }
+
+        } else {
+            alert('Este produto já consta no carrinho!')
         }
     })
 });
@@ -183,15 +198,15 @@ var largura_inicial = window.innerWidth
 
 // no carregamento inicial ou refreshs esta arrow function será executada, para ver o tamanho de largura que a página abriu, se for menor que 768px, adicione uma classe junto ao id menu, dentro da tag menu, esta classe é um seletor no mediaquery.css, definindo display none pra ela
 //Tal função garante que se a página for aberta em disp. mobile, o menu estará ocultado
-window.addEventListener('load', ()=>{
-   var menu = document.getElementById('menu')
+window.addEventListener('load', () => {
+    var menu = document.getElementById('menu')
 
-   if(window.innerWidth < 768){
+    if (window.innerWidth < 768) {
         menu.classList.add('menu-hidden')
-   }
-   else{
-    menu.classList.remove('menu-hidden')
-   }
+    }
+    else {
+        menu.classList.remove('menu-hidden')
+    }
 })
 
 window.addEventListener('resize', () => {

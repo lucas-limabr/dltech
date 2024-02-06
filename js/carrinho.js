@@ -47,7 +47,10 @@ if (cart && cart.length > 0) {
         qtd_produto.setAttribute('type', 'number')
         qtd_produto.setAttribute('value', '1')
 
-
+        const lixeira = document.createElement('img')
+        lixeira.setAttribute('src', "../img/icones/excluir.png")
+        lixeira.setAttribute('class', 'btn_delete')
+    
         productName.textContent = product.name
         productPrice.textContent = product.price
         productImage.src = product.image
@@ -57,12 +60,14 @@ if (cart && cart.length > 0) {
         productInfoDiv.appendChild(productPrice)
         productInfoDiv.appendChild(parag_qtd)
         productInfoDiv.appendChild(qtd_produto)
+        productInfoDiv.appendChild(lixeira)
 
         productDiv.appendChild(productInfoDiv)
         productDiv.appendChild(productImage)
 
         cartItemsdiv.appendChild(productDiv)
 
+        //console.log(cart)
     });
 
     exibeValor()
@@ -80,6 +85,18 @@ if (cart && cart.length > 0) {
             })
             exibeValor()
         })
+    })
+
+    var deletar = document.getElementsByClassName('btn_delete')
+    Array.from(deletar).forEach((produto, index) =>{
+        produto.addEventListener('click', ()=>{
+            let cart = JSON.parse(localStorage.getItem('cart'))
+            //remove o produto
+            cart.splice(index, 1)
+            //atualiza o localStorage (json)
+            localStorage.setItem('cart', JSON.stringify(cart))
+            location.reload()
+        })      
     })
 
     function exibeValor() {
