@@ -86,4 +86,19 @@
     #sociais {
         text-align: center;
     }
+
+    #cookie_bar{
+        font-size: 0.9em;
+        height: 117px;
+       padding-left: 15px;
+    }
+
+    #cookie_bar p{
+        text-indent: 25px;
+    }
+
+    #cookie_bar button{
+        margin-top: 20px;
+        margin-left: 47%;
+    }
 }

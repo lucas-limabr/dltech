@@ -34,7 +34,7 @@ header>nav {
     background-color: var(--cor_orange);
 }
 
-#menu_hamburguer{
+#menu_hamburguer {
     display: none;
     background-color: rgb(35, 35, 35);
     color: white;
@@ -46,7 +46,7 @@ menu {
     padding: 12px 0px 12px 25px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -65,12 +65,13 @@ a~span {
     color: white;
 }
 
-a > .material-symbols-outlined, .icons-hover > .material-symbols-outlined{
+a>.material-symbols-outlined,
+.icons-hover>.material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 menu>a:hover {
@@ -79,9 +80,9 @@ menu>a:hover {
     transition: 350ms;
 }
 
-#pesquisa{
+#pesquisa {
     float: right;
-    margin-right: 60px;    
+    margin-right: 60px;
 }
 
 input#search-bar {
@@ -125,7 +126,7 @@ section>div {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.566);
 }
 
-span.icons-hover{
+span.icons-hover {
     visibility: hidden;
     display: inline-block;
     color: var(--cor_gray);
@@ -145,13 +146,13 @@ h2 {
     padding: 8px 0px 8px 25px;
 }
 
-.div-hover > h3 {
+.div-hover>h3 {
     font-size: 14px;
     color: var(--cor_outer_space);
     padding: 8px 0px;
 }
 
-.div-hover > img {
+.div-hover>img {
     width: 200px;
 }
 
@@ -199,7 +200,7 @@ button:hover {
     color: var(--cor_gray);
 }
 
-#titulo-marcas{
+#titulo-marcas {
     display: flex;
     align-items: center;
     background-image: linear-gradient(to right, #e6ddd8, var(--cor_pumpkin));
@@ -207,29 +208,29 @@ button:hover {
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
-#titulo-marcas > span{
+#titulo-marcas>span {
     padding-right: 15px;
     color: var(--cor_orange);
 }
 
-section#secao-marcas  {
-   height: 300px;
+section#secao-marcas {
+    height: 300px;
 }
 
-.marcas{
+.marcas {
     width: 250px;
     height: 235px;
-    border-radius: 0px; 
+    border-radius: 0px;
 }
 
-.marcas > img{
+.marcas>img {
     height: 140px;
     border-radius: 4px;
     display: block;
@@ -238,7 +239,7 @@ section#secao-marcas  {
     margin-top: 15px;
 }
 
-.marcas > h3{
+.marcas>h3 {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
@@ -246,7 +247,7 @@ section#secao-marcas  {
     padding-top: 10px;
 }
 
-.marcas > a{
+.marcas>a {
     padding-bottom: 10px;
     color: var(--cor_orange);
     font-size: 14px;
@@ -254,19 +255,20 @@ section#secao-marcas  {
     font-weight: 600;
 }
 
-.marcas > span{
+.marcas>span {
     color: #FF6500;
     position: relative;
     top: 3%;
 }
 
-.marcas a:hover{
+.marcas a:hover {
     text-decoration: underline;
 }
+
 /* fim do conteúdo principal */
 
 /* início do rodapé */
-footer{
+footer {
     background-color: var(--cor_rich_black);
     display: flex;
     justify-content: space-evenly;
@@ -277,23 +279,23 @@ footer{
     margin-top: 50px;
 }
 
-footer a{
+footer a {
     color: rgb(218, 214, 214);
 }
 
-footer a[href="https://encurtador.com.br/coMN0"]{
+footer a[href="https://encurtador.com.br/coMN0"] {
     display: inline-block;
     text-decoration: underline;
     padding: 6.5px 0px;
 }
 
-footer h3{
+footer h3 {
     margin-bottom: 13px;
     color: var(--cor_orange);
     text-align: center;
 }
 
-footer a > img{
+footer a>img {
     display: inline-block;
     background-color: rgb(247, 244, 244);
     padding: 9px;
@@ -303,21 +305,54 @@ footer a > img{
     margin-left: 4px;
 }
 
-p > span.material-symbols-outlined{
+p>span.material-symbols-outlined {
     position: relative;
     top: 8px;
     padding-right: 14px;
     padding-bottom: 10px;
 }
 
-footer p{
+footer p {
     font-size: 14.5px;
 }
 
-#copy{
+#copy {
     background-color: var(--cor_rich_black);
-    padding: 12px; 
+    padding: 12px;
     color: rgb(218, 214, 214);
     border-top: 1px solid rgb(242, 232, 213);
     text-align: center;
+}
+
+#cookie_bar {
+    background-color: #0061b1e8;
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    bottom: 2px;
+    padding-top: 15px;
+    font-size: 1.05em;
+}
+
+#cookie_bar p {
+    color: var(--cor_pumpkin);
+    text-indent: 100px;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+#cookie_bar p>a {
+    color: white;
+    padding-left: 10px;
+    text-decoration: underline;
+    font-family: cursive;
+}
+
+#cookie_bar button {
+    width: fit-content;
+    margin-left: 49vw;
+    margin-top: 16px;
+    padding: 9px 10px;
+    font-size: 0.85em;
+    cursor: pointer;
 }

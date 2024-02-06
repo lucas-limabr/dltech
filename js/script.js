@@ -34,6 +34,10 @@ function ocultarIcone(j) {
     span[j].style.visibility = "hidden"
 }
 
+document.getElementById('aceitar_cookie').addEventListener('click', ()=>{
+    document.getElementById('cookie_bar').style.display = "none"
+})
+
 // FUNÇÃO DE PESQUISA DE PRODUTOS
 function pesquisar() {
     var div_hover = document.getElementsByClassName('div-hover')
