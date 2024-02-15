@@ -90,7 +90,7 @@
     #cookie_bar{
         font-size: 0.9em;
         height: 117px;
-       padding-left: 15px;
+       padding: 0px 15px;
     }
 
     #cookie_bar p{

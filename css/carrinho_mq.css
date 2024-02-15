@@ -15,6 +15,10 @@
         width: 100%;
     }
 
+    input#cep{
+        max-width: 40%;
+    }
+
     img {
         width: 150px;
     }

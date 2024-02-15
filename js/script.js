@@ -151,7 +151,7 @@ document.querySelectorAll('button, .comprar').forEach(button => {
             price: productPrice,
         };
 
-        // Verifica se já existe um carrinho no localStorage
+        // Verifica se já existe um carrinho no localStorage, esta variável assume um formato JSON
         let cart = localStorage.getItem('cart')
 
         //se for nulo, cria um novo array
@@ -177,6 +177,7 @@ document.querySelectorAll('button, .comprar').forEach(button => {
             if (redirecionar) {
                 window.location.href = 'carrinho.html'
             }
+            updateCartCounter()
 
         } else {
             alert('Este produto já consta no carrinho!')
@@ -198,6 +199,7 @@ var largura_inicial = window.innerWidth
 
 // no carregamento inicial ou refreshs esta arrow function será executada, para ver o tamanho de largura que a página abriu, se for menor que 768px, adicione uma classe junto ao id menu, dentro da tag menu, esta classe é um seletor no mediaquery.css, definindo display none pra ela
 //Tal função garante que se a página for aberta em disp. mobile, o menu estará ocultado
+//O evento load espera que todos os recursos da página sejam carregados, isto inclui links de css, mídias e scripts externos 
 window.addEventListener('load', () => {
     var menu = document.getElementById('menu')
 
@@ -207,6 +209,31 @@ window.addEventListener('load', () => {
     else {
         menu.classList.remove('menu-hidden')
     }
+})
+
+function updateCartCounter() {
+    let cart = localStorage.getItem('cart')
+    console.log(cart)
+    // se cart não for nulo, faça:
+    if (cart) {
+        //para manipular o localStorage eu preciso usar propriedades de array, para isso, converto o JSON para um array
+        cart = JSON.parse(cart)
+
+        // cart pode ser não nulo mas pode estar vazio. Se o array não tiver vazio, tem produto. Assim, exibe o contador de produtos no ícone do cart
+        if (cart.length != '') {
+            console.log('diferente vazio')
+            document.getElementById('counter_cart').style.display = "inline-block";
+            document.getElementById('counter_cart').innerText = cart.length;
+        }
+    }
+    else {
+        document.getElementById('counter_cart').style.display = "none";
+    }
+}
+
+// O evento DOMContentLoaded espera apenas o DOM (estrutura HTML) ser carregado para ser acionado
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCounter()
 })
 
 window.addEventListener('resize', () => {

@@ -6,8 +6,8 @@ var valor_tot = 0
 let valorNumerico = 0
 
 document.getElementById('clear_cart').addEventListener('click', function(){
+    // exclui todos os itens do cart, deixando-o nulo
     localStorage.removeItem('cart')
-    
     location.reload()
 })
 
@@ -66,8 +66,6 @@ if (cart && cart.length > 0) {
         productDiv.appendChild(productImage)
 
         cartItemsdiv.appendChild(productDiv)
-
-        //console.log(cart)
     });
 
     exibeValor()
@@ -91,8 +89,10 @@ if (cart && cart.length > 0) {
     Array.from(deletar).forEach((produto, index) =>{
         produto.addEventListener('click', ()=>{
             let cart = JSON.parse(localStorage.getItem('cart'))
-            //remove o produto
+            //remove o produto específico, mesmo se for excluído todos os produtos desta forma, o cart não ficará null, e sim um array vazio []
             cart.splice(index, 1)
+            console.log(cart)
+
             //atualiza o localStorage (json)
             localStorage.setItem('cart', JSON.stringify(cart))
             location.reload()
