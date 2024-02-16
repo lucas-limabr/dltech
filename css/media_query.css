@@ -16,7 +16,7 @@
     }
 
     /* na execução deste CSS, este seletor pode existir ou não, depende da função de load no js, se não existir, tudo bem, nada será feito */
-    menu.menu-hidden{
+    menu.menu-hidden {
         display: none;
     }
 
@@ -35,6 +35,11 @@
         text-align: center;
         position: relative;
         float: none;
+    }
+
+    #counter_cart{
+        top: 0;
+        right: 44%;
     }
 
     input+span {
@@ -87,18 +92,18 @@
         text-align: center;
     }
 
-    #cookie_bar{
-        font-size: 0.9em;
-        height: 117px;
-       padding: 0px 15px;
+    #cookie_bar {
+        font-size: 1em;
+        height: 135px;
+        padding: 15px 15px 0px;
     }
 
-    #cookie_bar p{
+    #cookie_bar p {
         text-indent: 25px;
     }
 
-    #cookie_bar button{
-        margin-top: 20px;
-        margin-left: 47%;
+    #cookie_bar button {
+        margin-top: 60px;
+        margin-left: 41vw;
     }
 }

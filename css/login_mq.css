@@ -23,101 +23,110 @@
     .container {
         flex-direction: column-reverse;
         align-items: center;
-       
+
     }
 
-    .login{
+    .login {
         margin: 0px;
         margin-bottom: 30px;
         width: 90%;
     }
 
-    .redes-sociais-cadastro button{
+    .redes-sociais-cadastro button {
         width: 27vw;
-        max-width: 165px;
+        height: 60px;
         font-size: 0.75em;
-    }
-
-    .redes-sociais-cadastro {
-       margin-left: 6%;
         padding: 0px;
     }
 
-    main p{
+    .redes-sociais-cadastro {
+        text-align: center;
+        padding: 0px;
+    }
+
+    main p {
         margin-left: 6%;
 
     }
 
-    .login, .cadastro{
+    .login,
+    .cadastro {
         border: 1px solid var(--cor_pumpkin);
     }
 
-    .input-tipo-conta{
+    .input-tipo-conta {
         text-align: left;
         margin-left: 6%;
     }
 
-    .redes-sociais-login{
+    .redes-sociais-login {
         margin-bottom: 20px;
     }
 
-    input[type="text"], input[type="password"], input[type="email"], select{
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    select {
         width: 90%;
         margin-bottom: 8px;
     }
 
-    .cadastro{
+    .cadastro {
         width: 90%;
     }
 
-    form{
+    form {
         text-align: center;
     }
 
-    .login a{
+    .login a {
         margin-left: 6%;
     }
 
-    form > button{
+    form>button {
         width: 90% !important;
-       margin-bottom: 20px !important;
+        margin-bottom: 20px !important;
     }
 
-    .data-telefone{
+    .data-telefone {
         display: flex;
         justify-content: space-around;
         width: 100%;
         padding-bottom: 8px;
     }
 
-    input[type="date"], input[type="tel"]{
+    input[type="date"],
+    input[type="tel"] {
         width: 40%;
     }
 
-    .e-mail, .nome-cpf{
+    .e-mail,
+    .nome-cpf {
         padding: 0px;
     }
 
-    .onde-conheceu{
+    .onde-conheceu {
         width: 90%;
         margin: auto;
     }
 
-    .texto-obrigatorio{
+    .texto-obrigatorio {
         text-align: left;
         margin-left: 6%;
     }
 
-    .checkbox-receber-info, .checkbox-acordo{
+    .checkbox-receber-info,
+    .checkbox-acordo {
         margin-left: 6%;
     }
 
-    .checkbox-receber-info p, .checkbox-acordo p {
+    .checkbox-receber-info p,
+    .checkbox-acordo p {
         text-align: left;
         margin: 5px 15px;
     }
 
-    button[type="submit"]{
+    button[type="submit"] {
         margin: auto;
     }
 

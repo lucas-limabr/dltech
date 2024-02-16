@@ -221,7 +221,6 @@ function updateCartCounter() {
 
         // cart pode ser não nulo mas pode estar vazio. Se o array não tiver vazio, tem produto. Assim, exibe o contador de produtos no ícone do cart
         if (cart.length != '') {
-            console.log('diferente vazio')
             document.getElementById('counter_cart').style.display = "inline-block";
             document.getElementById('counter_cart').innerText = cart.length;
         }

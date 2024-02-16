@@ -25,10 +25,10 @@
                 cpf_or_cnpj.placeholder = "CPF*"
             }
         }
- 
+
         function clicarMenu() {
             var menu = document.getElementById('menu')
-            
+
             if (menu.style.display == "none") {
                 menu.style.display = "block"
             } else {
@@ -36,13 +36,13 @@
             }
         }
 
-        window.addEventListener('resize', function(){
+        window.addEventListener('resize', function () {
             var menu = document.getElementById('menu')
-            
-            if(window.innerWidth >= 768){
+
+            if (window.innerWidth >= 768) {
                 menu.style.display = "block"
             }
-            else{
+            else {
                 menu.style.display = "none"
             }
         })
@@ -82,15 +82,15 @@
                 <h2>CRIAR CONTA</h2>
 
                 <div class="redes-sociais-cadastro">
-                    <a href="https://www.facebook.com/" target="_blank"><button class="botao-facebook-cadastro"><img
+                    <button class="botao-facebook-cadastro"><a href="https://www.facebook.com/" target="_blank"><img
                                 src="img/icones/facebook.png" alt="logo-facebook">Cadastrar com o
-                            <b>Facebook</b></button></a>
-                    <a href="https://accounts.google.com/"><button class="botao-google-cadastro"><img
+                            <b>Facebook</b></a></button>
+                    <button class="botao-google-cadastro"> <a href="https://accounts.google.com/"><img
                                 src="img/icones/search.png" alt="logo-google">Cadastrar com o
-                            <b>Google</b></button></a>
-                    <a href="https://appleid.apple.com/"><button class="botao-apple-cadastro"><img
+                            <b>Google</b></a></button>
+                    <button class="botao-apple-cadastro"> <a href="https://appleid.apple.com/"><img
                                 src="img/icones/apple-logo.png" alt="logo-apple">Cadastrar com a
-                            <b>Apple</b></button></a>
+                            <b>Apple</b> </a></button>
                 </div>
                 <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
 

@@ -29,7 +29,7 @@ header>h1 {
     text-align: center;
 }
 
-h1 > a{
+h1>a {
     color: white;
 }
 
@@ -37,7 +37,7 @@ header>nav {
     background-color: var(--cor_orange);
 }
 
-#menu_hamburguer{
+#menu_hamburguer {
     display: none;
     background-color: rgb(35, 35, 35);
     color: white;
@@ -49,7 +49,7 @@ menu {
     padding: 12px 0px 12px 25px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -68,12 +68,13 @@ a~span {
     color: white;
 }
 
-a > .material-symbols-outlined, .icons-hover > .material-symbols-outlined{
+a>.material-symbols-outlined,
+.icons-hover>.material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 menu>a:hover {
@@ -82,31 +83,35 @@ menu>a:hover {
     transition: 350ms;
 }
 
-input::placeholder{
+input::placeholder {
     font-size: 14px;
     padding: 10px;
 }
 
-input[type="text"], input[type="password"], input[type="email"], select{
-   padding: 10px;
-    border: solid 1px #7F858D;
-    border-radius: 5px;
-    width: 49.6%;
-}
-
-input[type="email"]{
-    width: 99.6%;
-}
-
-input[type="date"], input[type="tel"]{
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
     padding: 10px;
     border: solid 1px #7F858D;
     border-radius: 5px;
     width: 49.6%;
 }
 
-input#data-nascimento{
-   color: var(--cor_gray);
+input[type="email"] {
+    width: 99.6%;
+}
+
+input[type="date"],
+input[type="tel"] {
+    padding: 10px;
+    border: solid 1px #7F858D;
+    border-radius: 5px;
+    width: 49.6%;
+}
+
+input#data-nascimento {
+    color: var(--cor_gray);
 }
 
 h2 {
@@ -121,7 +126,8 @@ main p {
     color: var(--cor_gray);
 }
 
-.cadastro img, .login img{
+.cadastro img,
+.login img {
     width: 20px;
     height: 20px;
     margin-right: 5px;
@@ -137,37 +143,42 @@ label {
 /* Esconder o input padrão */
 input[type="radio"] {
     display: none;
-  }
-  
-  /* Estilizar a bolinha */
-  input[type="radio"] + label {
+}
+
+/* Estilizar a bolinha */
+input[type="radio"]+label {
     position: relative;
-    padding-left: 25px; /* Espaço para a nova bolinha */
+    padding-left: 25px;
+    /* Espaço para a nova bolinha */
     cursor: pointer;
-  }
-  
-  input[type="radio"] + label::before {
+}
+
+input[type="radio"]+label::before {
     content: '';
     position: absolute;
     top: 8px;
     left: 0;
-    width: 12px; /* Tamanho da nova bolinha */
-    height: 12px; /* Tamanho da nova bolinha */
+    width: 12px;
+    /* Tamanho da nova bolinha */
+    height: 12px;
+    /* Tamanho da nova bolinha */
     border-radius: 50%;
-    border: 1px solid var(--cor_rich_black); /* Cor da borda da nova bolinha */
-  }
-  
-  /* Estilizar quando selecionado */
-  input[type="radio"]:checked + label::before {
-    background-color: var(--cor_orange); /* Cor de preenchimento da nova bolinha quando selecionada */
-  }
+    border: 1px solid var(--cor_rich_black);
+    /* Cor da borda da nova bolinha */
+}
 
-  button{
+/* Estilizar quando selecionado */
+input[type="radio"]:checked+label::before {
+    background-color: var(--cor_orange);
+    /* Cor de preenchimento da nova bolinha quando selecionada */
+}
+
+button {
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-button[type="submit"]{
+button[type="submit"] {
     background-color: var(--cor_orange);
     color: white;
     font-weight: bold;
@@ -178,7 +189,7 @@ button[type="submit"]{
     margin-top: 8px;
 }
 
-.login button{
+.login button {
     background-color: var(--cor_orange);
     font-weight: bold;
     width: 100%;
@@ -186,7 +197,7 @@ button[type="submit"]{
     margin-top: 8px;
 }
 
-button[type="submit"]:hover{
+button[type="submit"]:hover {
     transition: 800ms;
     background-color: #ef833c;
 }
@@ -194,10 +205,10 @@ button[type="submit"]:hover{
 .container {
     margin-top: 20px;
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
 }
 
-.texto-tipo-conta{
+.texto-tipo-conta {
     color: gray;
     display: flex;
     margin-top: 50px;
@@ -212,44 +223,53 @@ button[type="submit"]:hover{
     margin-right: 5px;
 }
 
-.login h2{
+.login h2 {
     margin-bottom: 11px;
 }
 
-.login{
+.login {
     width: 30%;
     margin-left: 10px;
 }
 
 .redes-sociais-cadastro {
     padding-top: 15px;
-   margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.redes-sociais-cadastro img{
-   position: relative;
-   top: 3.5px;
+.redes-sociais-cadastro img {
+    position: relative;
+    top: 3.5px;
+}
+
+.redes-sociais-cadastro>button {
+    padding: 7px;
+    background-color: white;
+}
+
+.botao-facebook-cadastro>a {
+    color: blue;
 }
 
 .botao-facebook-cadastro {
-    background-color: white;
-    padding: 7px;
-    color: blue;
     border-color: blue;
     border-width: 1px;
 }
 
-.botao-google-cadastro {
-    background-color: white;
-    padding: 7px;
+.botao-google-cadastro>a {
     color: red;
+}
+
+.botao-google-cadastro {
     border-color: red;
     border-width: 1px;
 }
 
+.botao-apple-cadastro>a {
+    color: var(--cor_outer_space);
+}
+
 .botao-apple-cadastro {
-    background-color: white;
-    padding: 7px;
     border-width: 1px;
 }
 
@@ -267,30 +287,30 @@ button[type="submit"]:hover{
     margin: 0 10px;
 }
 
-.nome-cpf{
+.nome-cpf {
     padding-bottom: 10px;
 }
 
-.data-telefone{
+.data-telefone {
     padding-bottom: 10px;
 }
 
-.e-mail{
+.e-mail {
     padding-bottom: 10px;
 }
 
 
-.senha{
+.senha {
     padding-bottom: 10px;
 }
 
-.texto-obrigatorio{
+.texto-obrigatorio {
     padding-top: 5px;
     padding-bottom: 30px;
     font-size: 12px;
 }
 
-.checkbox-receber-info{
+.checkbox-receber-info {
     display: flex;
     padding-bottom: 10px;
 }
@@ -299,7 +319,7 @@ button[type="submit"]:hover{
     margin-left: 5px;
 }
 
-.checkbox-acordo{
+.checkbox-acordo {
     display: flex;
     padding-bottom: 10px;
 }
@@ -308,7 +328,7 @@ button[type="submit"]:hover{
     margin-left: 5px;
 }
 
-#onde-conheceu{
+#onde-conheceu {
     padding: 10px;
     border: solid 1px #7F858D;
     border-radius: 5px;
@@ -319,25 +339,25 @@ button[type="submit"]:hover{
 
 
 .inputs-login input {
-   width: 100%;
+    width: 100%;
     margin-bottom: 10px;
 }
 
 .login a {
-    display:flex;
+    display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 12px;
     color: var(--cor_gray);
 }
 
-.login span{
+.login span {
     padding-right: 10px;
     position: relative;
     top: 5px;
 }
 
-h2 ~ a{
+h2~a {
     text-decoration: underline;
 }
 
@@ -348,23 +368,23 @@ h2 ~ a{
     margin-bottom: 10px;
 }
 
-.redes-sociais-login button{
-   background-color: white;
+.redes-sociais-login button {
+    background-color: white;
     width: 36%;
 }
 
 
-.redes-sociais-login a{
+.redes-sociais-login a {
     display: inline;
     margin-right: 12px;
 }
 
-.redes-sociais-login img{
+.redes-sociais-login img {
     position: relative;
     top: 4px;
 }
 
-.botao-facebook-login{
+.botao-facebook-login {
     display: inline;
     background-color: white;
     padding: 5px;
@@ -374,7 +394,7 @@ h2 ~ a{
     font-weight: bold;
 }
 
-.botao-google-login{
+.botao-google-login {
     display: inline;
     background-color: white;
     padding: 5px;
@@ -384,12 +404,12 @@ h2 ~ a{
     font-weight: bold;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 /* início do rodapé */
-footer{
+footer {
     background-color: var(--cor_rich_black);
     display: flex;
     justify-content: space-evenly;
@@ -400,23 +420,23 @@ footer{
     margin-top: 50px;
 }
 
-footer a{
+footer a {
     color: rgb(218, 214, 214);
 }
 
-footer a[href="https://encurtador.com.br/coMN0"]{
+footer a[href="https://encurtador.com.br/coMN0"] {
     display: inline-block;
     text-decoration: underline;
     padding: 6.5px 0px;
 }
 
-footer h3{
+footer h3 {
     margin-bottom: 13px;
     color: var(--cor_orange);
     text-align: center;
 }
 
-footer a > img{
+footer a>img {
     display: inline-block;
     background-color: rgb(247, 244, 244);
     padding: 9px;
@@ -426,20 +446,20 @@ footer a > img{
     margin-left: 4px;
 }
 
-p > span.material-symbols-outlined{
+p>span.material-symbols-outlined {
     position: relative;
     top: 8px;
     padding-right: 14px;
     padding-bottom: 10px;
 }
 
-footer p{
+footer p {
     font-size: 14.5px;
 }
 
-#copy{
+#copy {
     background-color: var(--cor_rich_black);
-    padding: 12px; 
+    padding: 12px;
     color: rgb(218, 214, 214);
     border-top: 1px solid rgb(242, 232, 213);
     text-align: center;
