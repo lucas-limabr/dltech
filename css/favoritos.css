@@ -17,35 +17,85 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* como eu utilizei position sticky em um FILHO do body, eu não posso determinar altura para o body, pois isso afeta o comportamento sticky de seu filho */
-/* body,
+body,
 html {
     height: 100vh;
-   
-} */
+}
 
 /* início do cabeçalho */
-header {
+header>h1 {
     background-color: var(--cor_green_blue);
     padding: 25px 0px;
+    color: white;
     text-align: center;
 }
 
-header h1 {
+h1 > a{
     color: white;
+}
+
+header>nav {
+    background-color: var(--cor_orange);
+}
+
+#menu_hamburguer {
+    display: none;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    text-align: center;
+    padding: 6px 0px;
+}
+
+menu {
+    padding: 12px 0px 12px 25px;
 }
 
 a {
     text-decoration: none;
 }
 
+menu>a {
+    color: white;
+    font-weight: bold;
+    padding: 0px 15px;
+}
+
+a>span {
+    position: relative;
+    top: 6px;
+}
+
+a~span {
+    color: white;
+}
+
+a>.material-symbols-outlined,
+.icons-hover>.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+menu>a.hover_normal:hover {
+    background-color: #ef833c;
+    padding: 10px;
+    transition: 350ms;
+}
+
+menu>a:hover{
+    background-color: #ef833c;
+    transition: 350ms;
+}
+
 /* fim do cabeçalho */
 
+/* conteúdo principal */
 main {
-    width: 70%;
+    width: 90%;
     background-color: #f1f1f1;
-    float: left;
-    margin: 40px 0px;
+    margin: 40px auto;
 }
 
 h2 {
@@ -53,17 +103,20 @@ h2 {
     color: white;
 }
 
-#box-cep {
-    padding-left: 40px;
-    font-size: 0.95em;
-    color: var(--cor_gray);
+#title-fav {
+    padding: 10px 40px;
+    margin: 40px 0px;
+    background-color: var(--cor_pumpkin);
+    color: rgb(255, 255, 255);
 }
 
-#resultado {
-    margin-top: 10px;
+#fav-items {
+    padding-left: 50px;
+    margin: 50px 0px;
+    padding-bottom: 20px;
 }
 
-#clear_cart {
+#clear_fav {
     padding: 7px;
     background-color: crimson;
     border-radius: 20px;
@@ -73,110 +126,13 @@ h2 {
     font-weight: 500;
 }
 
-#box-cep button {
-    background-color: var(--cor_green_blue);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    font-size: 12px;
-    padding: 4px;
-    margin-left: 5px;
-}
-
-label {
-    padding-right: 8px;
-}
-
-#title-endereco {
-    display: flex;
-    background-color: var(--cor_pumpkin);
-    align-items: center;
-    padding: 10px 40px;
-    margin: 40px 0px;
-}
-
-#title-carrinho {
-    padding: 10px 40px;
-    margin: 40px 0px;
-    background-color: var(--cor_pumpkin);
-    color: rgb(255, 255, 255);
-}
-
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 1,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-}
-
-#title-endereco .material-symbols-outlined {
-    padding-right: 10px;
-}
-
-#cart-items {
-    padding-left: 50px;
-    margin: 50px 0px;
-    padding-bottom: 20px;
-}
-
-aside {
-    font-size: 7px;
-    float: right;
-    background-color: #f1f1f1;
-    width: 28%;
-    margin-top: 40px;
-    position: sticky;
-    top: 10px;
-}
-
-aside h2 {
-    font-size: 22px;
-    color: var(--cor_rich_black);
-    padding: 15px;
-}
-
-aside h3 {
-    padding-left: 15px;
-    padding-bottom: 4px;
-    font-size: 15px;
-    color: var(--cor_outer_space);
-    font-weight: 500;
-}
-
-aside button {
-    background-color: var(--cor_orange);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    padding: 6px;
-    margin-left: 30%;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-/* aplicando estilo as tag que foram criadas no javascript */
+/* estilo para os seletores criadas dinamicamente pelo javascript */
 img {
     width: 200px;
 }
-
-#input_num {
-    width: 6%;
-}
-
 div.info_produto>p {
     padding: 5px 0px;
 }
-
-.qtd_produto {
-    width: 45px;
-    text-align: center;
-}
-
 .box_produto {
     background-color: white;
     width: 90%;
@@ -186,34 +142,27 @@ div.info_produto>p {
     justify-content: start;
     flex-direction: row-reverse;
 }
-
 .info_produto {
     margin-left: 15px;
 }
-
 .title_produto {
     font-size: 18px;
     color: var(--cor_outer_space);
 }
-
 .preco_produto {
     font-size: 20px;
     color: var(--cor_orange);
     font-weight: bold;
 }
-
 .btn_delete {
     width: 20px;
-    margin-left: 12px;
     position: relative;
-    top: 2%;
+    top: 6%;
     cursor: pointer;
 }
-/* fim */
 
 /* início do rodapé */
 footer {
-    clear: both;
     background-color: var(--cor_rich_black);
     display: flex;
     justify-content: space-evenly;

@@ -135,7 +135,7 @@ function pesquisar() {
 // forEach só aceita iterar sobre um array comum ou uma NodeList (lista de nós), como é o caso, gerada pelo queryselectorAll
 // para selecionar mais de um seletor no querySelector, eu deixo eles dentro de '' e separados por vírgula
 document.querySelectorAll('button, .comprar').forEach(button => {
-    // função anônima é a correta para acessar o this, que é o button de cada iteração
+    // função anônima é a correta para acessar o this (arrow function não funciona), que é o button de cada iteração
     //a cada clique, já executa a função
     button.addEventListener('click', function () {
         //restringe a busca pelo seletor ao pesquisar apenas dentro da "div-hover" que é pai de this (button)
@@ -185,7 +185,50 @@ document.querySelectorAll('button, .comprar').forEach(button => {
     })
 });
 
+// FAVORITOS
+document.querySelectorAll('.favoritos').forEach(icon_fav => {
+    icon_fav.addEventListener('click', function() {
+        // console.log(this.offsetParent.querySelector('.title-produto').innerHTML)
+        const productName = this.offsetParent.querySelector('.title-produto').innerHTML
+        const productImage = this.offsetParent.querySelector('img').src
+        const productPrice = this.offsetParent.querySelector('.preco-desconto').innerHTML
+
+        // Cria um objeto com os detalhes do produto
+        const product = {
+            name: productName,
+            image: productImage,
+            price: productPrice,
+        };
+
+        let lista_favoritos = localStorage.getItem('lista_favoritos')
+
+        if (!lista_favoritos) {
+            lista_favoritos = []
+        }
+        else {
+            lista_favoritos = JSON.parse(lista_favoritos)
+        }
+
+        var produto_existente = lista_favoritos.some(item => item.name === product.name)
+        if (!produto_existente) {
+            lista_favoritos.push(product)
+
+            localStorage.setItem('lista_favoritos', JSON.stringify(lista_favoritos));
+
+            let redirecionar = confirm('Produto adicionado à lista de desejos! Deseja ir para os favoritos?')
+            if (redirecionar) {
+                window.location.href = 'favoritos.html'
+            }
+
+        } else {
+            alert('Este produto já consta na lista de favoritos!')
+        }
+    })
+})
+
 function clicarMenu() {
+    var menu = document.getElementById('menu')
+    
     if (menu.style.display == 'none') {
         menu.style.display = 'block';
     }

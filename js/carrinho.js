@@ -48,7 +48,7 @@ if (cart && cart.length > 0) {
         qtd_produto.setAttribute('value', '1')
 
         const lixeira = document.createElement('img')
-        lixeira.setAttribute('src', "../img/icones/excluir.png")
+        lixeira.setAttribute('src', "img/icones/excluir.png")
         lixeira.setAttribute('class', 'btn_delete')
     
         productName.textContent = product.name

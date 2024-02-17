@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos</title>
+
+    <link rel="stylesheet" href="css/favoritos.css">
+    <link rel="stylesheet" href="css/favoritos_mq.css">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <!-- cabeçalho -->
+    <header>
+        <h1><a href="index.html">DLtech</a></h1>
+        <!-- menu -->
+        <nav>
+            <span id="menu_hamburguer" onclick="clicarMenu()" class="material-symbols-outlined">menu
+            </span>
+            <menu id="menu">
+                <a class="hover_normal" href="index.html">Home</a> <span>|</span>
+                <a class="hover_normal" href="monte_seu_pc.html">Monte o seu pc</a> <span>|</span>
+                <a class="hover_normal" href="categorias.html">Categorias</a> <span>|</span>
+                <a class="hover_normal" href="login_cadastro.html">Login/cadastro</a> <span>|</span>
+                <a class="hover_normal" href="favoritos.html">
+                    <span class="material-symbols-outlined">favorite</span>
+                </a><span>|</span>
+                <a class="hover_normal" href="carrinho.html">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </a>
+            </menu>
+        </nav>
+    </header>
+
+    <main>
+        <!-- título "Marcas recomendadas" -->
+        <h2 id="title-fav">Favoritos</h2>
+
+        <button id="clear_fav">Excluir produtos</button>
+
+        <div id="fav-items"></div>
+    </main>
+
+    <!-- rodapé -->
+    <footer>
+        <!-- sobre -->
+        <div>
+            <a href="sobre.html">
+                <h3>Sobre nós</h3>
+            </a>
+        </div>
+        <hr>
+
+        <!-- mídias sociais -->
+        <div id="sociais">
+            <h3>Mídias sociais</h3>
+            <a href="#"><img src="img/icones/instagram.png" alt="logo instagram"></a>
+            <a href="#"><img src="img/icones/youtube.png" alt="logo youtube"></a>
+            <a href="https://github.com/lucas-limabr/dltech" target="_blank"><img src="img/icones/github.png"
+                    alt="logo github"></a>
+        </div>
+        <hr>
+        <!-- atendimento -->
+        <div>
+            <h3>Atendimento</h3>
+            <div id="atendimento">
+                <p><span class="material-symbols-outlined">
+                        call
+                    </span> (32)98756-4554</p>
+                <p><span class="material-symbols-outlined">
+                        mail
+                    </span>faleconosco@dltech.com</p>
+                <p><span class="material-symbols-outlined">
+                        location_on
+                    </span>Juiz de Fora, MG</p>
+                <a href="https://encurtador.com.br/coMN0" target="_blank">
+                    <p>Rua Bernardo Mascarenhas, 1283</p>
+                </a>
+                <p>CNPJ: 05.397.266/0001-33</p>
+            </div>
+        </div>
+    </footer>
+
+    <p id="copy">
+        Site criado por Lucas e Bernardo - &copy; Todos os direitos reservados
+    </p>
+
+    <!-- script -->
+    <script src="js/favoritos.js"></script>
+
+</body>
+
+</html>
