@@ -19,6 +19,18 @@
         display: none;
     }
 
+    img {
+        width: 150px;
+    }
+
+    .box_produto {
+        width: 100%;
+    }
+
+    #fav-items {
+        padding: 0px 10px;
+    }
+
     footer {
         flex-direction: column;
         align-content: center;
