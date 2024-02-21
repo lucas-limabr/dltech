@@ -294,13 +294,23 @@ window.addEventListener('resize', () => {
 
 document.getElementById('arrow_down').addEventListener('click', () => {
     var submenu = document.getElementById('submenu')
-
-    if (submenu.style.display === "inline" || submenu.style.display === "") {
+    
+    // no primeiro clique eu não defini nenhuma propriedade style para a variável submenu, portanto ela é "", vai entrar nesta condicional 
+    if (submenu.style.display === "") {
+       
+    // se for tela maior que 767px, o display será inline-block, pois manterá todos os itens do menu na mesma linha
+        if(window.innerWidth > 767){
         submenu.style.display = 'inline-block';
+       }
+    //caso contrário, o display será block, no mobile cada menu ocupará toda uma linha e ainda eu consigo centralizar com text-align center
+       else{
+         submenu.style.display = 'block';
+       }
 
         var agrupa_links = document.createElement('div');
         agrupa_links.setAttribute('id', 'agrupador_links');
 
+        // criei os submenus que são links
         let submenu1 = document.createElement('a');
         submenu1.setAttribute('class', 'submenus');
         submenu1.innerHTML = `<a href="#">Hardware</a>`;
@@ -313,20 +323,19 @@ document.getElementById('arrow_down').addEventListener('click', () => {
         submenu3.setAttribute('class', 'submenus');
         submenu3.innerHTML = `<a href="#">Smartphones</a>`;
 
+        // envolvi os submenus em uma div e por fim esta div no id submnenu
         agrupa_links.appendChild(submenu1);
         agrupa_links.appendChild(submenu2);
         agrupa_links.appendChild(submenu3);
         submenu.appendChild(agrupa_links);
 
+    // para o segundo clique esta condicional será atendida, pois o display do submenu que era "" anteriormente, se tornou inline-block ou block conforme o tamanho da tela
     } else {
         // Esconde agrupa_links e todos os seus filhos
         var agrupa_links = document.getElementById('agrupador_links');
-       
-        if (agrupa_links) {
-            agrupa_links.style.display = 'none';
-        }
-        
+
         submenu.removeChild(agrupa_links)
-        submenu.style.display = 'inline'
+        // volto o display do submenu para o estado original "" para no 3º clique a primeira condicional ser atendida, e assim por diante
+        submenu.style.display = '' 
     }
 });

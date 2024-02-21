@@ -24,6 +24,28 @@
         display: none;
     }
 
+    #submenu{
+        display: block;
+        text-align: center;
+    }
+
+    .submenus{
+        width: 100%;
+        text-align: center;
+        border-bottom: none;
+        border-top: 1px solid rgb(196, 194, 194);
+        background-color: #e38b50; 
+    }
+
+    a[href="categorias.html"]{
+      display: inline-block;
+      margin: 8px 0px;
+    }
+
+    #agrupador_links{
+       position: static;
+    }
+
     input#search-bar {
         padding-left: 12px;
         margin: 9px 0px;

@@ -1,0 +1,62 @@
+@media screen and (max-width: 767px) {
+    menu>a {
+        display: block;
+        border: 1px solid rgb(172, 164, 164);
+        padding: 6px;
+        text-align: center;
+
+    }
+
+    #menu_hamburguer {
+        display: block;
+    }
+
+    menu {
+        padding: 0px;
+    }
+
+    menu>span {
+        display: none;
+    }
+
+    h1{
+        font-size: 1.5em;
+    }
+
+    footer {
+        flex-direction: column;
+        align-content: center;
+        padding: 0px;
+    }
+
+    footer h3 {
+        margin: 0px;
+    }
+
+    footer div {
+        padding: 22px 0px;
+    }
+
+    #atendimento {
+        text-align: center;
+    }
+
+    #sociais {
+        text-align: center;
+    }
+
+    #cookie_bar {
+        font-size: 1em;
+        height: 135px;
+        padding: 15px 15px 0px;
+    }
+
+    #cookie_bar p {
+        text-indent: 25px;
+    }
+
+    #cookie_bar button {
+        margin-top: 60px;
+        margin-left: 41vw;
+    }
+}

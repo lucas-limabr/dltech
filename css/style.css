@@ -97,7 +97,7 @@ menu a:hover {
 .submenus{
     display: block;
     background-color: var(--cor_orange);
-    width: 95%;
+    width: 96%;
     text-align: left;
     padding: 5px 0px;
    border-bottom: 1px solid rgb(196, 194, 194);

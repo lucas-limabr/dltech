@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de privacidade</title>
 
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="css/politica_privacidade.css">
+    <link rel="stylesheet" href="css/politica_mq.css">
+
+    <script>
+        window.addEventListener('resize', () => {
+            let menu = document.getElementById('menu')
+
+            if (window.innerWidth >= 768) {
+                menu.style.display = "block"
+            }
+            else {
+                menu.style.display = "none"
+            }
+        })
+
+        function clicarMenu() {
+            var menu = document.getElementById('menu')
+
+            if (menu.style.display == 'none') {
+                menu.style.display = 'block';
+            }
+            else {
+                menu.style.display = 'none';
+            }
+        }
+    </script>
 </head>
+
 <body>
 
     <header>
@@ -32,7 +63,12 @@
 
     <main>
         <h1>Política de privacidade</h1>
-        <p>Esta é uma loja virtual fictícia, onde os produtos não são vendidos. As imagens dos produtos foram tiradas do site de e-commerce <a href="https://www.kabum.com.br/">Kabum</a>, assim como o design do site, incluindo a paleta de cores e as fontes. Este site foi criado por dois alunos de TI, como um trabalho, apenas para o aprimoramento de habilidades relacionadas ao desenvolvimento web. Os ícones utilizados foram tirados do Google Icons e também do <a href="https://www.flaticon.com/br/">Flaticon</a>. Todos estes produtos podem ser encontrados para a venda no site ofcial do Kabum.</p>
+        <p>Esta é uma loja virtual fictícia, onde os produtos não são vendidos. As imagens dos produtos foram tiradas do
+            site de e-commerce <a href="https://www.kabum.com.br/">Kabum</a>, assim como o design do site, incluindo a
+            paleta de cores e as fontes. Este site foi criado por dois alunos de TI, como um trabalho, apenas para o
+            aprimoramento de habilidades relacionadas ao desenvolvimento web. Os ícones utilizados foram tirados do
+            Google Icons e também do <a href="https://www.flaticon.com/br/">Flaticon</a>. Todos estes produtos podem ser
+            encontrados para a venda no site ofcial do Kabum.</p>
     </main>
 
     <footer>
@@ -77,6 +113,7 @@
     <p id="copy">
         Site criado por Lucas e Bernardo - &copy; Todos os direitos reservados
     </p>
-    
+
 </body>
+
 </html>
