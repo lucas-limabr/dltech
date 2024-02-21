@@ -50,7 +50,7 @@ a {
     text-decoration: none;
 }
 
-menu>a {
+menu a {
     color: white;
     font-weight: bold;
     padding: 0px 15px;
@@ -79,15 +79,40 @@ a[href="carrinho.html"] {
 }
 
 
-menu>a.hover_normal:hover {
+menu a.hover_normal:hover {
     background-color: #ef833c;
     padding: 10px;
     transition: 350ms;
 }
 
-menu>a:hover{
+menu a:hover {
     background-color: #ef833c;
     transition: 350ms;
+}
+
+#submenu{
+    display: inline;
+}
+
+.submenus{
+    display: block;
+    background-color: var(--cor_orange);
+    width: 95%;
+    text-align: left;
+    padding: 5px 0px;
+   border-bottom: 1px solid rgb(196, 194, 194);
+}
+
+#agrupador_links{
+    position: absolute;
+    top: 150px;
+}
+
+#arrow_down {
+
+    position: relative;
+    top: 7px;
+    right: 10px;
 }
 
 #counter_cart {

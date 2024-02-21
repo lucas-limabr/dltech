@@ -187,7 +187,7 @@ document.querySelectorAll('button, .comprar').forEach(button => {
 
 // FAVORITOS
 document.querySelectorAll('.favoritos').forEach(icon_fav => {
-    icon_fav.addEventListener('click', function() {
+    icon_fav.addEventListener('click', function () {
         // console.log(this.offsetParent.querySelector('.title-produto').innerHTML)
         const productName = this.offsetParent.querySelector('.title-produto').innerHTML
         const productImage = this.offsetParent.querySelector('img').src
@@ -228,7 +228,7 @@ document.querySelectorAll('.favoritos').forEach(icon_fav => {
 
 function clicarMenu() {
     var menu = document.getElementById('menu')
-    
+
     if (menu.style.display == 'none') {
         menu.style.display = 'block';
     }
@@ -291,3 +291,42 @@ window.addEventListener('resize', () => {
         }
     }
 })
+
+document.getElementById('arrow_down').addEventListener('click', () => {
+    var submenu = document.getElementById('submenu')
+
+    if (submenu.style.display === "inline" || submenu.style.display === "") {
+        submenu.style.display = 'inline-block';
+
+        var agrupa_links = document.createElement('div');
+        agrupa_links.setAttribute('id', 'agrupador_links');
+
+        let submenu1 = document.createElement('a');
+        submenu1.setAttribute('class', 'submenus');
+        submenu1.innerHTML = `<a href="#">Hardware</a>`;
+
+        let submenu2 = document.createElement('a');
+        submenu2.setAttribute('class', 'submenus');
+        submenu2.innerHTML = `<a href="#">Computadores</a>`;
+
+        let submenu3 = document.createElement('a');
+        submenu3.setAttribute('class', 'submenus');
+        submenu3.innerHTML = `<a href="#">Smartphones</a>`;
+
+        agrupa_links.appendChild(submenu1);
+        agrupa_links.appendChild(submenu2);
+        agrupa_links.appendChild(submenu3);
+        submenu.appendChild(agrupa_links);
+
+    } else {
+        // Esconde agrupa_links e todos os seus filhos
+        var agrupa_links = document.getElementById('agrupador_links');
+       
+        if (agrupa_links) {
+            agrupa_links.style.display = 'none';
+        }
+        
+        submenu.removeChild(agrupa_links)
+        submenu.style.display = 'inline'
+    }
+});
